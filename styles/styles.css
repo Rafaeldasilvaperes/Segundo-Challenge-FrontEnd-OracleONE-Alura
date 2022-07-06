@@ -1,0 +1,35 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body{
+  
+  
+  color: var(--color-default);
+
+  
+  /* color: white;
+  background-image: linear-gradient(to bottom right, #3b3b4b, #000000); */
+}
+
+
+.app{
+  display: grid;
+  grid-template-areas: 
+  "cabecalho"
+  "conteudo"
+  "rodape";
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  background-color: var(--bg-produtos-cinza);
+}
+
+.conteudo{
+  grid-area: conteudo;
+  display: grid;
+  gap: 64px;
+  grid-template-areas: 
+  "hero"
+  "produtos"
+  "contatos";
+}

@@ -1,0 +1,38 @@
+.contatos{
+  grid-area: contatos;
+  padding: 64px var(--padding-default);
+  background-color: var(--bg-azulclaro);
+}
+
+.contatos__container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 112px;
+}
+
+
+.contatos__item_ul_li{
+  font-size: var(--fs-content-P);
+  line-height: var(--lh-content-P);
+}
+.contatos__item_ul_li:not(:last-child){
+  margin-bottom: 24px;
+}
+
+.contatos__item:last-child{
+  display: flex;
+  flex-direction: column;
+}
+.contatos__item fieldset{
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.contatos__item_titulo_form{
+  font-size: var(--fs-content-cards-preco-VerProduto700);
+  line-height: var(--lh-content-cards-preco-VerProduto700);
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
