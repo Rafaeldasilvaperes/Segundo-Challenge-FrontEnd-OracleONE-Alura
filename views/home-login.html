@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - Login</title>
+  <!--CSS REUTILIZADO-->
+  <link href="../styles/index/reset.css" rel="stylesheet">
+  <link href="../styles/index/normalize.css" rel="stylesheet">
+  <link href="../styles/index/variaveis.css" rel="stylesheet">
+  <link href="../styles/index/cabecalho.css" rel="stylesheet">
+  <link href="../styles/index/contato.css" rel="stylesheet">
+  <!--CSS RODAPE-->
+  <link href="../styles/index/rodape.css" rel="stylesheet">
+  <!--CSS BASE-->
+  <link href="../styles/index/styles.css" rel="stylesheet">
+  <!--CSS HOME LOGIN BASE-->
+  <link href="../styles/home-login/styles.css" rel="stylesheet">
+
+  <!--CSS HOME LOGIN-->
+  <link href="../styles/home-login/login.css" rel="stylesheet">
+
+  <!--VARIAVEIS RESPONSIVO-->
+  <link href="../styles/variaveis-responsivo/variaveis-responsivo.css" rel="stylesheet">
+
+  <!--ARROW ICONE FROM BOOTSTRAP ICONS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!--ICONE DA PÁGINA-->
+  <link rel="icon" href="/img/controller-svg.svg?" type="image/icon type">
+  <!--FONT Raleway Principal-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="app">
+  <!--CABEÇALHO HEADER-->
+  <header class="cabecalho">
+    <ul class="cabecalho__container">
+      <li class="cabecalho__container_items">
+        <a href="/">
+          <img src="../img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="cabecalho__logo">
+        </a>
+      </li>
+      <li class="cabecalho__container_items">
+        <input placeholder="O que deseja encontrar?" type="text" class="cabecalho__search_bar">
+      </li>
+      <li class="cabecalho__container_items">
+        <a href="home-login.html" class="cabecalho__btn_login">Login</a>
+      </li>
+    </ul>
+  </header>
+  <!--FIM CABECALHO HEADER-->
+
+  <!--MAIN CONTEÚDO-->
+  <main class="conteudo">
+    <!--LOGIN FORM-->
+    <section class="login">
+      <div class="contatos__item contatos__item--login">
+        <h2 class="contatos__item_titulo_form contatos__item_titulo_form--login">Iniciar Sessão</h2>
+        <form action="">
+          <fieldset>
+
+            <input class="input input--login" name="email" id="email" type="text" placeholder="Escreva seu email" required>
+            
+            <input class="input input--login" name="senha" id="senha" type="password" placeholder="Escreva sua senha" required>
+            
+            <input class="submit__btn" type="submit" value="Entrar">
+          </fieldset>
+        </form>
+      </div>
+    </section>
+    <!--FIM LOGIN FORM-->
+
+
+
+    <!--CONTATO CONTACT-->
+    <section class="contatos">
+      <ul class="contatos__container">
+
+        <li class="contatos__item">
+          <a href="#">
+            <img src="../img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="contatos__imagem">
+          </a>
+        </li>
+
+        <li class="contatos__item">
+          <ul class="contatos__item_ul">
+            <li class="contatos__item_ul_li"><a href="#">Quem somos nós</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Política de privacidade</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Programa fidelidade</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Nossas lojas</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Quero ser franqueado</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Anuncie aqui</a></li>
+          </ul>
+        </li>
+
+        <li class="contatos__item">
+          <h2 class="contatos__item_titulo_form">Fale conosco</h2>
+          <form action="">
+            <fieldset>
+
+              <div class="contatos__item_input_container">
+                <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
+                <label class="input-label" for="nome">Nome: </label>
+              </div>
+
+              <label for=""></label>
+              <textarea class="textarea" name="" id="" placeholder="Escreva sua mensagem" rows="10" required></textarea>
+              <div>
+                <input class="submit__btn" type="submit" value="Enviar mensagem">
+              </div>
+            </fieldset>
+          </form>
+        </li>
+      </ul>
+    </section>
+    <!--FIM CONTATO CONTACT-->
+  
+  </main>
+  <!--RODAPÉ FOOTER-->
+  <footer class="rodape">
+    Desenvolvido por Rafael Peres <br>2022
+  </footer>
+  <!--FIM RODAPÉ FOOTER-->
+</body>
+</html>

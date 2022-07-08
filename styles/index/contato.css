@@ -39,6 +39,7 @@
 }
 .contatos__item:last-child{
   flex-grow: 1;
+  max-width: 570px;
 }
 
 .contatos__item_titulo_form{
@@ -50,7 +51,6 @@
 
 .contatos__item_input_container{
   position: relative;
-  margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -80,7 +80,7 @@
   border: transparent;
   border-radius: 4px;
   border-bottom: 2px solid rgb(196, 196, 196);
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 .input::placeholder {
   visibility: hidden;
@@ -142,28 +142,60 @@
 }
 
 
-@media only screen and (max-width: 1200px){
-  
-}
-
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 992px){
   .contatos__container{
-    gap: 0;
+    gap: 94px;
     flex-wrap: wrap;
+    
+  }
+  .contatos{
+    padding: 32px var(--padding-default);
+  }
+  .contatos__container{
+    position: relative;
+  }
+  .contatos__item:nth-child(2){
+    position: absolute;
+    flex: none;
+    top: 25%;
+  }
+  .contatos__item:nth-child(3){
+    padding-bottom: 46px;
   }
 }
 @media only screen and (max-width: 600px){
   .contatos__container{
-    gap: 0;
+    gap: 16px;
     flex-direction: column;
     align-items: stretch;
     justify-content: space-around;
   }
-  .contatos__item fieldset{
+  .contatos{
+    padding: 16px var(--padding-default);
+  }
+  .contatos__container{
+    position: inherit;
+  }
+  .contatos__item:nth-child(1){
+    text-align: center;
+  }
+  .contatos__item:nth-child(2){
+    position: inherit;
+    text-align: center;
     
   }
-}
-@media only screen and (max-width: 360px){
-  
-  
+  .contatos__item:nth-child(3){
+    padding-bottom: 0;
+    padding-top: 16px;
+  }
+  .contatos__item_ul_li:not(:last-child){
+    margin-bottom: 16px;
+  }
+  .contatos__item_titulo_form{
+    margin-bottom: 8px;
+  }
+  .submit__btn{
+    margin-top: 8px;
+    padding: 12px 16px;
+  }
 }

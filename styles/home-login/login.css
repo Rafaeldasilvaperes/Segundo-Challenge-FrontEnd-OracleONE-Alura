@@ -1,0 +1,16 @@
+.login{
+  grid-area: login;
+  padding: 92px 35.7%;
+}
+.contatos__item_titulo_form--login{
+  text-align: center;
+}
+
+.input--login{
+  padding: 18px 12px 25px 12px;
+}
+.input--login::placeholder{
+  visibility: visible;
+  color: var(--color-default);
+  opacity: 0.7;
+}
