@@ -13,6 +13,9 @@
   <link href="./styles/produtos.css" rel="stylesheet">
   <link href="./styles/contato.css" rel="stylesheet">
 
+  <!--VARIAVEIS RESPONSIVO-->
+  <link href="./styles/variaveis-responsivo/variaveis-responsivo.css" rel="stylesheet">
+
 
   <link href="./styles/rodape.css" rel="stylesheet">
 
@@ -247,19 +250,19 @@
       <ul class="contatos__container">
 
         <li class="contatos__item">
-          <a href="">
+          <a href="#">
             <img src="./img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="contatos__imagem">
           </a>
         </li>
 
         <li class="contatos__item">
           <ul class="contatos__item_ul">
-            <li class="contatos__item_ul_li">Quem somos nós</li>
-            <li class="contatos__item_ul_li">Política de privacidade</li>
-            <li class="contatos__item_ul_li">Programa fidelidade</li>
-            <li class="contatos__item_ul_li">Nossas lojas</li>
-            <li class="contatos__item_ul_li">Quero ser franqueado</li>
-            <li class="contatos__item_ul_li">Anuncie aqui</li>
+            <li class="contatos__item_ul_li"><a href="#">Quem somos nós</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Política de privacidade</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Programa fidelidade</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Nossas lojas</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Quero ser franqueado</a></li>
+            <li class="contatos__item_ul_li"><a href="#">Anuncie aqui</a></li>
           </ul>
         </li>
 
@@ -267,11 +270,17 @@
           <h2 class="contatos__item_titulo_form">Fale conosco</h2>
           <form action="">
             <fieldset>
-              <input type="text">
-              <label for="">Nome: </label>
+
+              <div class="contatos__item_input_container">
+                <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
+                <label class="input-label" for="nome">Nome: </label>
+              </div>
+
               <label for=""></label>
-              <textarea name="" id="" cols="30" rows="10"></textarea>
-              <input type="submit" value="Enviar mensagem">
+              <textarea class="textarea" name="" id="" placeholder="Escreva sua mensagem" rows="10" required></textarea>
+              <div>
+                <input class="submit__btn" type="submit" value="Enviar mensagem">
+              </div>
             </fieldset>
           </form>
         </li>
@@ -283,7 +292,7 @@
   <!--FIM MAIN CONTEÚDO-->
   <!--RODAPÉ FOOTER-->
   <footer class="rodape">
-    Desenvolvido por Rafael Peres 2022
+    Desenvolvido por Rafael Peres <br>2022
   </footer>
   <!--FIM RODAPÉ FOOTER-->
 

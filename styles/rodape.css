@@ -1,3 +1,8 @@
 .rodape{
   grid-area: rodape;
+  text-align: center;
+  padding: 32px;
+
+  font-size: var(--fs-content-cards-preco-VerProduto700);
+  line-height: var(--lh-content-cards-preco-VerProduto700);
 }

@@ -38,3 +38,24 @@
   background-color: var(--btn-hover);
   
 }
+
+
+@media only screen and (max-width: 1200px){
+  .hero{
+    padding: 161px var(--padding-default) 32px;
+  }
+}
+@media only screen and (max-width: 992px){
+
+}
+@media only screen and (max-width: 768px){
+
+}
+@media only screen and (max-width: 600px){
+  .hero{
+    padding: 161px var(--padding-default) 32px;
+  }
+}
+@media only screen and (max-width: 360px){
+
+}
