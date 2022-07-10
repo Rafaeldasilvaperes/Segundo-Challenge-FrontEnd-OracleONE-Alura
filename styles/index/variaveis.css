@@ -24,6 +24,12 @@
   --fs-content-P: 16px;
   --lh-content-P: 19px;
 
+  --fs-login-titulo700: 18px;
+  --lh-login-titulo700: 21.13px;
+
+  --fs-btn600: 18px;
+  --lh-btn600: 21.13px;
+
   --fs-incones-medias-sociais: 32px;
   /* PADDINGS e WIDTH/HEIGHT */
   --padding-default: 10.556%;

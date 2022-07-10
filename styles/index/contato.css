@@ -65,7 +65,7 @@
   line-height: var(--lh-content-P);
   font-weight: 400;
 
-  opacity: 0.7;
+  opacity: 0.5;
   transition: all .25s;
 }
 .input {
@@ -124,6 +124,8 @@
 }
 
 .submit__btn{
+  font-size: var(--fs-btn600);
+  line-height: var(--lh-btn600);
   text-decoration: none;
   padding: 16px;
   margin-top: 10px;

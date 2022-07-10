@@ -4,23 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login</title>
+  <title>Adicionar Produto</title>
   <!--CSS REUTILIZADO-->
   <link href="../styles/index/reset.css" rel="stylesheet">
   <link href="../styles/index/normalize.css" rel="stylesheet">
   <link href="../styles/index/variaveis.css" rel="stylesheet">
   <link href="../styles/index/cabecalho.css" rel="stylesheet">
   <link href="../styles/index/contato.css" rel="stylesheet">
-  <!--CSS RODAPE-->
-  <link href="../styles/index/rodape.css" rel="stylesheet">
-  <!--CSS BASE-->
-  <link href="../styles/index/base-index.css" rel="stylesheet">
-  <!--CSS BASE HOME LOGIN-->
-  <link href="../styles/home-login/base-login.css" rel="stylesheet">
-
-  <!--CSS HOME LOGIN-->
   <link href="../styles/home-login/login.css" rel="stylesheet">
   <link href="../styles/home-login/cabecalho-login.css" rel="stylesheet">
+  <!--CSS RODAPE-->
+  <link href="../styles/index/rodape.css" rel="stylesheet">
+  <!--CSS BASE INDEX-->
+  <link href="../styles/index/base-index.css" rel="stylesheet">
+  <!--CSS BASE PRODUTO ADICIONAR-->
+  <link href="../styles/produtos-home/produtos-adicionar/base-produto-adicionar.css" rel="stylesheet">
+
+  <!--CSS PRODUTO ADICIONAR-->
+  <link href="/styles/produtos-home/produtos-adicionar/produtos-adicionar.css" rel="stylesheet">
 
   <!--VARIAVEIS RESPONSIVO-->
   <link href="../styles/variaveis-responsivo/variaveis-responsivo.css" rel="stylesheet">
@@ -47,7 +48,7 @@
         <input placeholder="O que deseja encontrar?" type="text" class="cabecalho__search_bar">
       </li>
       <li class="cabecalho__container_items">
-        <a href="home-login.html" class="cabecalho__btn_login cabecalho__btn_login--login">Login</a>
+        <a href="#" class="cabecalho__btn_login cabecalho__btn_login--admin">Menu administrador</a>
       </li>
     </ul>
   </header>
@@ -56,17 +57,35 @@
   <!--MAIN CONTEÚDO-->
   <main class="conteudo">
     <!--LOGIN FORM-->
-    <section class="login">
+    <section class="adicionarProduto">
       <div class="contatos__item contatos__item--login">
-        <h2 class="contatos__item_titulo_form contatos__item_titulo_form--login">Iniciar Sessão</h2>
+        <h2 class="contatos__item_titulo_form | contatos__item_titulo_form--login | contatos__item_titulo_form--adicionar">Adicionar Novo Produto</h2>
         <form class="contatos__form" action="">
           <fieldset>
 
-            <input class="input input--login" name="email" id="email" type="text" placeholder="Escreva seu email" required>
+            <div class="contatos__item_input_container">
+              <input class="input input--adicionar" name="imagem" id="imagem" type="text" placeholder="URL da imagem" required>
+              <label class="input-label" for="imagem">URL da imagem</label>
+            </div>
             
-            <input class="input input--login" name="senha" id="senha" type="password" placeholder="Escreva sua senha" required>
+            <div class="contatos__item_input_container">
+              <input class="input input--adicionar" name="categoria" id="categoria" type="text" placeholder="Categoria" required>
+              <label class="input-label" for="categoria">Categoria</label>
+            </div>
             
-            <input class="submit__btn submit__btn--login" type="submit" value="Entrar">
+            <div class="contatos__item_input_container">
+              <input class="input input--adicionar" name="produto" id="produto" type="text" placeholder="Nome do produto" required>
+              <label class="input-label" for="produto">Nome do produto</label>
+            </div>
+
+            <div class="contatos__item_input_container">
+              <input class="input input--adicionar" name="preco" id="preco" type="text" placeholder="Preço do produto" required>
+              <label class="input-label" for="preco">Preço do produto</label>
+            </div>
+
+            <textarea class="textarea" name="" id="" rows="10" placeholder="Descrição do produto"></textarea>
+
+            <input class="submit__btn submit__btn--adicionar" type="submit" value="Adicionar produto">
           </fieldset>
         </form>
       </div>

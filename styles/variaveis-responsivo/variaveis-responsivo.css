@@ -20,16 +20,20 @@
 
 @media only screen and (max-width: 768px) {
   :root{
-    --padding-default: 16px;
+    --padding-default: 32px;
 
     --fs-titulo700: 52px;
     --lh-titulo700: 61px;
 
+    --fs-btn600: 14px;
+    --lh-btn600: 16.44px;
   }
 }
 
 @media only screen and (max-width: 600px) {
   :root{
+    --padding-default: 16px;
+
     --fs-titulo700: 22px;
     --lh-titulo700: 25.83px;
 

@@ -1,0 +1,58 @@
+.adicionarProduto{
+  grid-area: adicionarProduto;
+  padding: 64px 30.56%;
+}
+
+.contatos__item:last-child{
+  max-width: 100%;
+}
+
+.cabecalho__container_items:last-child a{
+  padding: 16px 16px;
+}
+
+.contatos__item_titulo_form--adicionar{
+  font-size: var(--fs-content-titulo700);
+  line-height: var(--lh-content-titulo700);
+}
+.contatos__item--login{
+  gap: 16px;
+}
+.contatos__form fieldset{
+  gap: 16px;
+}
+.input--adicionar{
+  margin-bottom: 0;
+}
+.submit__btn--adicionar{
+  padding: 16px;
+}
+
+
+@media only screen and (max-width: 1240px){
+  .adicionarProduto{
+    padding: 32px; 
+  }
+}
+
+@media only screen and (max-width: 768px){
+  
+  .contatos__item--login{
+    gap: 16px;
+  }
+  .contatos__form fieldset{
+    gap: 16px;
+  }
+  .input--login{
+    padding: 8px 12px 13px 12px;
+  }
+  .submit__btn--login{
+    padding: 12px 34px;
+    max-width: 109px;
+    justify-self: center;
+  }
+  
+}
+@media only screen and (max-width: 600px){
+  
+}

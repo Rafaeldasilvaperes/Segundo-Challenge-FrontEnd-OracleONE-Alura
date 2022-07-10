@@ -48,7 +48,7 @@
 
 @media only screen and (max-width: 1200px){
   .cabecalho{
-    padding: 16px 32px;
+    padding: 16px var(--padding-default);
   }
   .cabecalho__logo{
     width: 100px;
@@ -68,7 +68,7 @@
 @media only screen and (max-width: 768px){
 
 }
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 670px){
   .cabecalho__container{
     display: flex;
     align-items: center;
