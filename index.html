@@ -34,20 +34,21 @@
 <body class="app">
   <!--CABEÇALHO HEADER-->
   <header class="cabecalho">
-    <ul class="cabecalho__container">
-      <li class="cabecalho__container_items">
-        <a href="/">
-          <img src="./img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="cabecalho__logo">
-        </a>
-      </li>
-      <li class="cabecalho__container_items">
-        <input placeholder="O que deseja encontrar?" type="text" class="cabecalho__search_bar">
-      </li>
-      <li class="cabecalho__container_items">
-        <a href="./views/home-login.html" class="cabecalho__btn_login">Login</a>
-      </li>
-    </ul>
-
+    <nav aria-label="primary">
+      <ul class="cabecalho__container">
+        <li class="cabecalho__container_items">
+          <a href="/">
+            <img src="./img/alura_geek_logo.png" alt="Ilustração de controle de video game seguido do texto Alura Geek. Logotipo" class="cabecalho__logo">
+          </a>
+        </li>
+        <li class="cabecalho__container_items">
+          <input role="search" placeholder="O que deseja encontrar?" type="text" class="cabecalho__search_bar">
+        </li>
+        <li class="cabecalho__container_items">
+          <a aria-label="Botão Entrar" href="./views/home-login.html" class="cabecalho__btn_login">Login</a>
+        </li>
+      </ul>
+  </nav>
   </header>
   <!--FIM CABECALHO HEADER-->
 
@@ -58,9 +59,9 @@
     <section class="hero">
       <div class="hero__container">
         <h1 class="hero__container_titulo">Dezembro Promocional</h1>
-        <h3 class="hero__container_subtitulo">Produtos selecionados com 33% de desconto</h3>
+        <h2 class="hero__container_subtitulo">Produtos selecionados com 33% de desconto</h2>
         <div class="hero__container_btn_wrapper">
-          <a href="#" class="hero__container_button">Ver Albums</a>
+          <a aria-label="Ver albuns de música" href="./views/produtos-home.html" class="hero__container_button">Ver Albums</a>
         </div>
       </div>
     </section>
@@ -68,14 +69,14 @@
     <!--PRODUTOS PRODUCTS-->
     <section class="produtos">
       <!--PRODUTOS ROW 1-->
-      <h2 class="produtos__categoria">Albums</h2>
+      <h2 aria-label="Albums de música" class="produtos__categoria">Albums</h2>
       <a class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
       <div class="produtos__container">
         <article class="produtos__article">
           <a href="#" class="produtos__item">
             <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
+            <h3 class="produtos__item_titulo">Produto XYZ</h3>
+            <h4 class="produtos__item_preco">R$ 60,00</h4>
             <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
           </a>
         </article>
@@ -132,7 +133,7 @@
       <div class="produtos__container">
         <article class="produtos__article">
           <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-tshirt.JPG" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
+            <img src="/img/img-cards/card-img-tshirt.JPG" alt="Camiseta branca representando produto" class="produtos__item_imagem">
             <h2 class="produtos__item_titulo">Produto YZX</h2>
             <h3 class="produtos__item_preco">R$ 80,00</h3>
             <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
@@ -270,7 +271,7 @@
 
         <li class="contatos__item">
           <h2 class="contatos__item_titulo_form">Fale conosco</h2>
-          <form action="">
+          <form aria-label="Fale conosco" action="">
             <fieldset>
 
               <div class="contatos__item_input_container">

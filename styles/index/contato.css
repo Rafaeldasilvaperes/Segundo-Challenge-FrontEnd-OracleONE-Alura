@@ -20,7 +20,7 @@
   margin-bottom: 24px;
 }
 .contatos__item_ul_li:hover a{
-  filter: brightness(1.5);
+  color: var(--btn-blue);
 }
 .contatos__item_ul_li a{
   font-size: var(--fs-content-P);
