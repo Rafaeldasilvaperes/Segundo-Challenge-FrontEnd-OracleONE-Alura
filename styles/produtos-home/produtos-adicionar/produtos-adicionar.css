@@ -10,6 +10,9 @@
 .cabecalho__container_items:last-child a{
   padding: 16px 16px;
 }
+.cabecalho__btn_login--admin{
+  padding: 16px;
+}
 
 .contatos__item_titulo_form--adicionar{
   font-size: var(--fs-content-titulo700);
@@ -28,6 +31,11 @@
   padding: 16px;
 }
 
+@media only screen and (min-width: 1900px){
+  .adicionarProduto{
+    padding: 64px 30.56%; 
+  }
+}
 
 @media only screen and (max-width: 1240px){
   .adicionarProduto{

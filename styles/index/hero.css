@@ -1,7 +1,7 @@
 .hero{
   grid-area: hero;
   padding: 150px var(--padding-default) 32px;
-  background: url(/img/Hero.jpg) center / cover no-repeat;
+  background: url(./img/Hero.jpg) center / cover no-repeat;
 }
 
 .hero__container{
