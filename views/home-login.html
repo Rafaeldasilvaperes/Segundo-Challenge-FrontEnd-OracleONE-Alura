@@ -37,19 +37,21 @@
 <body class="app">
   <!--CABEÇALHO HEADER-->
   <header class="cabecalho">
-    <ul class="cabecalho__container">
-      <li class="cabecalho__container_items">
-        <a href="/">
-          <img src="../img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="cabecalho__logo">
-        </a>
-      </li>
-      <li class="cabecalho__container_items">
-        <input placeholder="O que deseja encontrar?" type="text" class="cabecalho__search_bar">
-      </li>
-      <li class="cabecalho__container_items">
-        <a href="home-login.html" class="cabecalho__btn_login cabecalho__btn_login--login">Login</a>
-      </li>
-    </ul>
+    <nav aria-label="primário">
+      <ul class="cabecalho__container">
+        <li class="cabecalho__container_items">
+          <a href="/">
+            <img src="../img/alura_geek_logo.png" alt class="cabecalho__logo">
+          </a>
+        </li>
+        <li class="cabecalho__container_items">
+          <input placeholder="O que deseja encontrar?" type="search" class="cabecalho__search_bar">
+        </li>
+        <li class="cabecalho__container_items">
+          <a aria-label="Botão Entrar" href="home-login.html" class="cabecalho__btn_login">Login</a>
+        </li>
+      </ul>
+    </nav>
   </header>
   <!--FIM CABECALHO HEADER-->
 
@@ -58,13 +60,20 @@
     <!--LOGIN FORM-->
     <section class="login">
       <div class="contatos__item contatos__item--login">
-        <h2 class="contatos__item_titulo_form contatos__item_titulo_form--login">Iniciar Sessão</h2>
         <form class="contatos__form" action="">
           <fieldset>
-
-            <input class="input input--login" name="email" id="email" type="text" placeholder="Escreva seu email" required>
+            <legend class="contatos__item_titulo_form--login">Iniciar Sessão</legend>
+            <!-- <h2 class="contatos__item_titulo_form--login"></h2> -->
             
-            <input class="input input--login" name="senha" id="senha" type="password" placeholder="Escreva sua senha" required>
+            <div class="contatos__item_input_container">
+              <input class="input input--login" name="email" id="email" type="text" placeholder="Escreva seu email" required>
+              <label class="input-label input-label--login" for="email">Escreva seu email </label>
+            </div>
+            
+            <div class="contatos__item_input_container">
+              <input class="input input--login" name="senha" id="senha" type="password" placeholder="Escreva sua senha" required>
+              <label class="input-label input-label--login" for="senha">Escreva sua senha</label>
+            </div>
             
             <input class="submit__btn submit__btn--login" type="submit" value="Entrar">
           </fieldset>
@@ -77,44 +86,45 @@
 
     <!--CONTATO CONTACT-->
     <section class="contatos">
-      <ul class="contatos__container">
+      <nav aria-label="secundário">
+        <ul class="contatos__container">
 
-        <li class="contatos__item">
-          <a href="/">
-            <img src="../img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="contatos__imagem">
-          </a>
-        </li>
+          <li class="contatos__item">
+            <a href="/">
+              <img src="../img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="contatos__imagem">
+            </a>
+          </li>
 
-        <li class="contatos__item">
-          <ul class="contatos__item_ul">
-            <li class="contatos__item_ul_li"><a href="#">Quem somos nós</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Política de privacidade</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Programa fidelidade</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Nossas lojas</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Quero ser franqueado</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Anuncie aqui</a></li>
-          </ul>
-        </li>
+          <li class="contatos__item">
+            <ul class="contatos__item_ul">
+              <li class="contatos__item_ul_li"><a href="#">Quem somos nós</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Política de privacidade</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Programa fidelidade</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Nossas lojas</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Quero ser franqueado</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Anuncie aqui</a></li>
+            </ul>
+          </li>
 
-        <li class="contatos__item">
-          <h2 class="contatos__item_titulo_form">Fale conosco</h2>
-          <form action="">
-            <fieldset>
+          <li class="contatos__item">
+            <form action="">
+              <fieldset>
+                <legend><h2 class="contatos__item_titulo_form">Fale conosco</h2></legend>
+                <div class="contatos__item_input_container">
+                  <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
+                  <label class="input-label" for="nome">Nome: </label>
+                </div>
 
-              <div class="contatos__item_input_container">
-                <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
-                <label class="input-label" for="nome">Nome: </label>
-              </div>
-
-              <label for=""></label>
-              <textarea class="textarea" name="" id="" placeholder="Escreva sua mensagem" rows="10" required></textarea>
-              <div>
-                <input class="submit__btn" type="submit" value="Enviar mensagem">
-              </div>
-            </fieldset>
-          </form>
-        </li>
-      </ul>
+                <label aria-label="Escreva sua Mensagem" for="contatoMensagem"></label>
+                <textarea class="textarea" name="" id="contatoMensagem" placeholder="Escreva sua mensagem" rows="10" required></textarea>
+                <div>
+                  <input class="submit__btn" type="submit" value="Enviar mensagem">
+                </div>
+              </fieldset>
+            </form>
+          </li>
+        </ul>
+      </nav>
     </section>
     <!--FIM CONTATO CONTACT-->
   

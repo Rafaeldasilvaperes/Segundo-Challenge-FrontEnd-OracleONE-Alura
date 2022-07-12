@@ -26,7 +26,9 @@
 .cabecalho__container_items input::placeholder{
   opacity: 0.7;
 }
-.cabecalho__container_items input:focus{
+.cabecalho__container_items input:focus,
+.cabecalho__container_items input:hover,
+.cabecalho__container_items input:active{
   outline-color: var(--btn-blue);
   outline-style: solid;
 }
@@ -38,6 +40,7 @@
   padding: 16px 70px;
   border: 1px solid var(--btn-blue);
   color: var(--btn-blue);
+  font-weight: 400;
   transition: all 0.3s;
 }
 .cabecalho__container_items:last-child a:hover{

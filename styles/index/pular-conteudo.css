@@ -1,0 +1,16 @@
+.pularConteudo{
+  position: absolute;
+  padding: 16px;
+  background-color: var(--btn-blue);
+  text-decoration: none;
+  color: aliceblue;
+  top: 10%;
+  left: -100vw;
+  transition: all 0.5s;
+}
+.pularConteudo:focus{
+  left: 0;
+}
+.pularConteudo:hover{
+  background-color: var(--btn-hover);
+}

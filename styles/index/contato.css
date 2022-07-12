@@ -71,9 +71,7 @@
 .input {
   box-sizing: border-box;
   padding: 30px 8px 8px;
-  /* height: 3.25rem; */
   width: 100%;
-  /* background-color: transparent; */
   font-size: var(--fs-content-P);
   line-height: var(--lh-content-P);
   color: inherit;

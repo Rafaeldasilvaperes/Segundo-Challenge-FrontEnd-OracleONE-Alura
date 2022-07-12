@@ -16,19 +16,21 @@
   line-height: var(--lh-login-titulo700);
   font-weight: 700;
   margin: 0;
+  padding-bottom: 25px;
 }
 .input--login{
   margin: 0;
 }
 
 .input--login{
-  padding: 18px 12px 25px 12px;
+  padding: 28px 12px 10px 12px;
 }
 .input--login::placeholder{
-  visibility: visible;
+  /* visibility: visible; */
   color: var(--color-default);
   opacity: 0.7;
 }
+
 .submit__btn--login{
   font-size: var(--fs-btn600);
   line-height: var(--lh-btn600);
@@ -44,18 +46,14 @@
 }
 
 @media only screen and (max-width: 768px){
-  .login{
-    padding: 45px 32.09% 61px; 
-  }
+  
   .contatos__item--login{
     gap: 16px;
   }
   .contatos__form fieldset{
     gap: 16px;
   }
-  .input--login{
-    padding: 8px 12px 13px 12px;
-  }
+  
   .submit__btn--login{
     padding: 12px 34px;
     max-width: 109px;

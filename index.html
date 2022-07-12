@@ -12,6 +12,7 @@
   <link href="./styles/index/hero.css" rel="stylesheet">
   <link href="./styles/index/produtos.css" rel="stylesheet">
   <link href="./styles/index/contato.css" rel="stylesheet">
+  <link href="./styles/index/pular-conteudo.css" rel="stylesheet">
 
   <!--CSS RODAPE-->
   <link href="./styles/index/rodape.css" rel="stylesheet">
@@ -32,9 +33,12 @@
 </head>
 
 <body class="app">
+  <!---->
+  <a class="pularConteudo" href="#conteudoPrincipal">Pular para conteúdo principal</a>
+  <!---->
   <!--CABEÇALHO HEADER-->
   <header class="cabecalho">
-    <nav aria-label="primary">
+    <nav aria-label="primário">
       <ul class="cabecalho__container">
         <li class="cabecalho__container_items">
           <a href="/">
@@ -42,18 +46,18 @@
           </a>
         </li>
         <li class="cabecalho__container_items">
-          <input role="search" placeholder="O que deseja encontrar?" type="text" class="cabecalho__search_bar">
+          <input placeholder="O que deseja encontrar?" type="text" class="cabecalho__search_bar">
         </li>
         <li class="cabecalho__container_items">
           <a aria-label="Botão Entrar" href="./views/home-login.html" class="cabecalho__btn_login">Login</a>
         </li>
       </ul>
-  </nav>
+    </nav>
   </header>
   <!--FIM CABECALHO HEADER-->
 
   <!--MAIN CONTEÚDO-->
-  <main class="conteudo">
+  <main id="conteudoPrincipal" class="conteudo">
     
     <!--HERO APRESENTAÇÃO-->
     <section class="hero">
@@ -69,225 +73,261 @@
     <!--PRODUTOS PRODUCTS-->
     <section class="produtos">
       <!--PRODUTOS ROW 1-->
-      <h2 aria-label="Albums de música" class="produtos__categoria">Albums</h2>
-      <a class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
-      <div class="produtos__container">
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h3 class="produtos__item_titulo">Produto XYZ</h3>
-            <h4 class="produtos__item_preco">R$ 60,00</h4>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+      <h2 aria-label="Categoria Albums de música" class="produtos__categoria">Albums</h2>
+      <a aria-label="Ver todos os produtos" class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
+      <ul aria-label="Produtos" class="produtos__container">
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
-      </div>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-pinkfloyd.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+      </ul>
       <!--FIM PRODUTOS ROW 1-->
       <!--PRODUTOS ROW 2-->
       <h2 class="produtos__categoria">Camisetas</h2>
-      <a class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
-      <div class="produtos__container">
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-tshirt.JPG" alt="Camiseta branca representando produto" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto YZX</h2>
-            <h3 class="produtos__item_preco">R$ 80,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+      <a aria-label="Ver todos os produtos" class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
+      <ul aria-label="Produtos" class="produtos__container">
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-tshirt.JPG" alt="Camiseta branca representando produto" class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto YZX</h2>
+              <h4 class="produtos__item_preco">R$ 80,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-tshirt.JPG" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto YZX</h2>
-            <h3 class="produtos__item_preco">R$ 80,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-tshirt.JPG" alt="Camiseta branca representando produto" class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto YZX</h2>
+              <h4 class="produtos__item_preco">R$ 80,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-tshirt.JPG" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto YZX</h2>
-            <h3 class="produtos__item_preco">R$ 80,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-tshirt.JPG" alt="Camiseta branca representando produto" class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto YZX</h2>
+              <h4 class="produtos__item_preco">R$ 80,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-tshirt.JPG" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto YZX</h2>
-            <h3 class="produtos__item_preco">R$ 80,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-tshirt.JPG" alt="Camiseta branca representando produto" class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto YZX</h2>
+              <h4 class="produtos__item_preco">R$ 80,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-tshirt.JPG" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto YZX</h2>
-            <h3 class="produtos__item_preco">R$ 80,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-tshirt.JPG" alt="Camiseta branca representando produto" class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto YZX</h2>
+              <h4 class="produtos__item_preco">R$ 80,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-tshirt.JPG" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto YZX</h2>
-            <h3 class="produtos__item_preco">R$ 80,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
-      </div>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-tshirt.JPG" alt="Camiseta branca representando produto" class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto YZX</h2>
+              <h4 class="produtos__item_preco">R$ 80,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+      </ul>
       <!--FIM PRODUTOS ROW 2-->
       <!--PRODUTOS ROW 3-->
       <h2 class="produtos__categoria">Variados</h2>
-      <a class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
-      <div class="produtos__container">
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-mugs.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+      <a aria-label="Ver todos os produtos" class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
+      <ul aria-label="Produtos" class="produtos__container">
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-mugs.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h2>
+              <h4 class="produtos__item_preco">R$ 60,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-mugs.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-mugs.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h2>
+              <h4 class="produtos__item_preco">R$ 60,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-mugs.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-mugs.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h2>
+              <h4 class="produtos__item_preco">R$ 60,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-mugs.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-mugs.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h2>
+              <h4 class="produtos__item_preco">R$ 60,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-mugs.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
+        <li>
+          <article class="produtos__article">
+            <a href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-mugs.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h2>
+              <h4 class="produtos__item_preco">R$ 60,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
 
-        <article class="produtos__article">
-          <a href="#" class="produtos__item">
-            <img src="/img/img-cards/card-img-mugs.jpg" alt="Linha branca entrando pelo buraco da agulha e saindo do outro lado colorida" class="produtos__item_imagem">
-            <h2 class="produtos__item_titulo">Produto XYZ</h2>
-            <h3 class="produtos__item_preco">R$ 60,00</h3>
-            <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
-          </a>
-        </article>
-      </div>
+        <li>
+          <article class="produtos__article">
+            <a aria-labelledby="Produto" href="#" class="produtos__item">
+              <img src="/img/img-cards/card-img-mugs.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo" id="Produto">Produto XYZ</h2>
+              <h4 class="produtos__item_preco">R$ 60,00</h3>
+              <a href="#" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+      </ul>
       <!--FIM PRODUTOS ROW 3-->
     </section>
     <!--FIM PRODUTOS PRODUCTS-->
 
     <!--CONTATO CONTACT-->
     <section class="contatos">
-      <ul class="contatos__container">
+      <nav aria-label="secundário">
+        <ul class="contatos__container">
+          <li class="contatos__item">
+            <a href="#">
+              <img src="./img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="contatos__imagem">
+            </a>
+          </li>
 
-        <li class="contatos__item">
-          <a href="#">
-            <img src="./img/alura_geek_logo.png" alt="Imagem de um controle de video game seguido do texto Alura Geek" class="contatos__imagem">
-          </a>
-        </li>
+          <li class="contatos__item">
+            <ul class="contatos__item_ul">
+              <li class="contatos__item_ul_li"><a href="#">Quem somos nós</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Política de privacidade</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Programa fidelidade</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Nossas lojas</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Quero ser franqueado</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Anuncie aqui</a></li>
+            </ul>
+          </li>
 
-        <li class="contatos__item">
-          <ul class="contatos__item_ul">
-            <li class="contatos__item_ul_li"><a href="#">Quem somos nós</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Política de privacidade</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Programa fidelidade</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Nossas lojas</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Quero ser franqueado</a></li>
-            <li class="contatos__item_ul_li"><a href="#">Anuncie aqui</a></li>
-          </ul>
-        </li>
+          <li class="contatos__item">
+            <form action="">
+              <fieldset>
+                <legend><h2 class="contatos__item_titulo_form">Fale conosco</h2></legend>
+                <div class="contatos__item_input_container">
+                  <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
+                  <label class="input-label" for="nome">Nome: </label>
+                </div>
 
-        <li class="contatos__item">
-          <h2 class="contatos__item_titulo_form">Fale conosco</h2>
-          <form aria-label="Fale conosco" action="">
-            <fieldset>
-
-              <div class="contatos__item_input_container">
-                <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
-                <label class="input-label" for="nome">Nome: </label>
-              </div>
-
-              <label for=""></label>
-              <textarea class="textarea" name="" id="" placeholder="Escreva sua mensagem" rows="10" required></textarea>
-              <div>
-                <input class="submit__btn" type="submit" value="Enviar mensagem">
-              </div>
-            </fieldset>
-          </form>
-        </li>
-      </ul>
+                <label aria-label="Escreva sua Mensagem" for="contatoMensagem"></label>
+                <textarea class="textarea" name="" id="contatoMensagem" placeholder="Escreva sua mensagem" rows="10" required></textarea>
+                <div>
+                  <input class="submit__btn" type="submit" value="Enviar mensagem">
+                </div>
+              </fieldset>
+            </form>
+          </li>
+        </ul>
+      </nav>
     </section>
 
     <!--FIM CONTATO CONTACT-->
@@ -295,7 +335,9 @@
   <!--FIM MAIN CONTEÚDO-->
   <!--RODAPÉ FOOTER-->
   <footer class="rodape">
-    Desenvolvido por Rafael Peres <br>2022
+    <h2>
+      Desenvolvido por Rafael Peres <br>2022
+    </h2>
   </footer>
   <!--FIM RODAPÉ FOOTER-->
 
