@@ -94,7 +94,7 @@
     order: 3;
     width: 24px;
     height: 24px;
-    background: url(/img/search.svg) center / cover no-repeat;
+    background: url(../../img/search.svg) center / cover no-repeat;
   }
   
 }
