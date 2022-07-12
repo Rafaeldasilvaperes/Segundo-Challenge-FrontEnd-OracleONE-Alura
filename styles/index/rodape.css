@@ -6,3 +6,13 @@
   font-size: var(--fs-content-cards-preco-VerProduto700);
   line-height: var(--lh-content-cards-preco-VerProduto700);
 }
+
+.rodape a{
+  text-decoration: none;
+  color: inherit;
+}
+
+.rodape a:hover{
+  color: var(--btn-blue);
+  font-weight: 900;
+}
