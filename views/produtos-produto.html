@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <!--CSS REUTILIZADO-->
+  <link href="../styles/index/reset.css" rel="stylesheet">
+  <link href="../styles/index/normalize.css" rel="stylesheet">
+  <link href="../styles/index/variaveis.css" rel="stylesheet">
+  <link href="../styles/index/cabecalho.css" rel="stylesheet">
+  <link href="../styles/index/contato.css" rel="stylesheet">
+  <link href="../styles/index/produtos.css" rel="stylesheet">
+  
+  <!--CSS RODAPE-->
+  <link href="../styles/index/rodape.css" rel="stylesheet">
+  <!--CSS BASE-->
+  <link href="../styles/index/base-index.css" rel="stylesheet">
+  <!--CSS BASE PRODUTOS PRODUTO-->
+  <link href="../styles/produtos-home/produtos-produto/base-produtos-produto.css" rel="stylesheet">
+
+  <!--CSS PRODUTOS PRODUTO-->
+  <link href="../styles/produtos-home/produtos-produto/produto-descricao.css" rel="stylesheet">
+  <link href="../styles/produtos-home/produtos-produto/similares-produtos.css" rel="stylesheet">
+
+  <!--VARIAVEIS RESPONSIVO-->
+  <link href="../styles/variaveis-responsivo/variaveis-responsivo.css" rel="stylesheet">
+
+  <!--ARROW ICONE FROM BOOTSTRAP ICONS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css" rel="stylesheet">
+  <!--ICONE DA PÁGINA-->
+  <link rel="icon" href="../img/heaphone-svg1.svg?" type="image/icon type">
+  <!--FONT Raleway Principal-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="app">
+  <!--CABEÇALHO HEADER-->
+  <header class="cabecalho">
+    <nav aria-label="primário">
+      <ul class="cabecalho__container">
+        <li class="cabecalho__container_items">
+          <a href="../index.html">
+            <img src="../img/alura_geek_logo.png" alt class="cabecalho__logo">
+          </a>
+        </li>
+        <li class="cabecalho__container_items" >
+          <img class="cabecalho__search-btn" src="../img/search.svg" alt="Luneta para pesquisa" data-header-search-icon>
+          <input placeholder="O que deseja encontrar?" type="search" class="cabecalho__search_bar" data-header-search-bar>
+        </li>
+        <li class="cabecalho__container_items">
+          <a aria-label="Botão Entrar" href="home-login.html" class="cabecalho__btn_login">Login</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!--FIM CABECALHO HEADER-->
+
+  <!--MAIN CONTEÚDO-->
+  <main class="conteudo">
+    <!--PRODUTO DESCRIÇÃO PRODUCT DESCRIPTION-->
+    <section class="produto-descricao">
+      <div class="produto__container">
+        <img src="../img/img-cards/card-img-pinkfloyd.webp" alt="" class="produto__img">
+        <div class="produto__descricao">
+          <h2 class="produto__descricao__titulo">Produto XYZ</h2>
+          <h3 class="produto__descricao__subtitulo">R$ 60,00</h3>
+          <h4 class="produto__descricao__texto">Voluptas voluptatum quibusdam similique, class debitis alias maecenas eveniet ridiculus, facilis fusce! Ullam conubia? Sociis, minima malesuada habitasse distinctio sequi aliqua malesuada. Quisque deleniti proin expedita, aliquid litora. Iste recusandae? Commodo, quia ridiculus doloribus vero dictum? Penatibus donec placeat faucibus, dolorum do. Animi porta anim magnam</h4>
+        </div>
+      </div>
+    </section>
+    <!--FIM PRODUTO DESCRIÇÃO PRODUCT DESCRIPTION-->
+
+    <!--SIMILARES PRODUTOS SIMILAR PRODUCTS-->
+    <section class="produtos">
+      <h2 aria-label="Categoria Albums de música" class="produtos__categoria">Albums</h2>
+      <ul aria-label="Produtos" class="produtos__container">
+        <li>
+          <article class="produtos__article">
+            <a href="./views/produtos-produto.html" class="produtos__item">
+              <img src="../img/img-cards/card-img-pinkfloyd.webp" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+
+        <li>
+          <article class="produtos__article">
+            <a href="./views/produtos-produto.html" class="produtos__item">
+              <img src="../img/img-cards/card-img-ledzeppelin.webp" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+
+        <li>
+          <article class="produtos__article">
+            <a href="./views/produtos-produto.html" class="produtos__item">
+              <img src="../img/img-cards/card-img-kingsofleon.webp" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+
+        <li>
+          <article class="produtos__article">
+            <a href="./views/produtos-produto.html" class="produtos__item">
+              <img src="../img/img-cards/card-img-u2.webp" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+
+        <li>
+          <article class="produtos__article">
+            <a href="./views/produtos-produto.html" class="produtos__item">
+              <img src="../img/img-cards/card-img-rivalsons.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+
+        <li>
+          <article class="produtos__article">
+            <a href="./views/produtos-produto.html" class="produtos__item">
+              <img src="../img/img-cards/card-img-blackpistolfire.jpg" alt class="produtos__item_imagem">
+              <h3 class="produtos__item_titulo">Produto XYZ</h3>
+              <h4 class="produtos__item_preco">R$ 60,00</h4>
+              <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
+            </a>
+          </article>
+        </li>
+      </ul>
+    </section>
+    <!--FIM SIMILARES PRODUTOS SIMILAR PRODUCTS-->
+
+    <!--CONTATO CONTACT-->
+    <section class="contatos">
+      <nav aria-label="secundário">
+        <ul class="contatos__container">
+
+          <li class="contatos__item">
+            <a href="../index.html">
+              <img src="../img/alura_geek_logo.png" alt class="contatos__imagem">
+            </a>
+          </li>
+
+          <li class="contatos__item">
+            <ul class="contatos__item_ul">
+              <li class="contatos__item_ul_li"><a href="#">Quem somos nós</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Política de privacidade</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Programa fidelidade</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Nossas lojas</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Quero ser franqueado</a></li>
+              <li class="contatos__item_ul_li"><a href="#">Anuncie aqui</a></li>
+            </ul>
+          </li>
+
+          <li class="contatos__item">
+            <form action="">
+              <fieldset>
+                <legend><h2 class="contatos__item_titulo_form">Fale conosco</h2></legend>
+                <div class="contatos__item_input_container">
+                  <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
+                  <label class="input-label" for="nome">Nome: </label>
+                </div>
+
+                <label aria-label="Escreva sua Mensagem" for="contatoMensagem"></label>
+                <textarea class="textarea" name="" id="contatoMensagem" placeholder="Escreva sua mensagem" rows="10" required></textarea>
+                <div>
+                  <input class="submit__btn" type="submit" value="Enviar mensagem">
+                </div>
+              </fieldset>
+            </form>
+          </li>
+        </ul>
+      </nav>
+    </section>
+    <!--FIM CONTATO CONTACT-->
+  
+  </main>
+  <!--RODAPÉ FOOTER-->
+  <footer class="rodape">
+    <a target="_blank" href="https://www.linkedin.com/in/rafael-da-silva-peres-ba4228bb/">
+      <h2>
+       Desenvolvido por Rafael Peres <br>2022
+      </h2>
+    </a>
+  </footer>
+  <!--FIM RODAPÉ FOOTER-->
+
+  <script src="../scripts/main.js" type="module"></script>
+</body>
+</html>

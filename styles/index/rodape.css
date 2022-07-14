@@ -5,11 +5,16 @@
 
   font-size: var(--fs-content-cards-preco-VerProduto700);
   line-height: var(--lh-content-cards-preco-VerProduto700);
+  background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .rodape a{
   text-decoration: none;
   color: inherit;
+  font-weight: 900;
+  display: block;
 }
 
 .rodape a:hover{

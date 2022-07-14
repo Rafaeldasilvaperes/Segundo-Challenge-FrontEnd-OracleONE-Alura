@@ -6,6 +6,7 @@
 .cabecalho__container{
   display: flex;
   align-items: center;
+  
 }
 .cabecalho__container_items:first-child a:hover{
   filter:brightness(1.3);
@@ -47,6 +48,9 @@
   border-color: white;
   color: white;
   background-color: var(--btn-blue);
+}
+.cabecalho__search-btn{
+  display: none;
 }
 
 @media only screen and (max-width: 1200px){
@@ -94,9 +98,34 @@
     order: 3;
     width: 24px;
     height: 24px;
-    background: url(../../img/search.svg) center / cover no-repeat;
+    /* background: url(../../img/search.svg) center / cover no-repeat; */
   }
   
+  .cabecalho__search-btn{
+    display: block;
+    width: 100%;
+    cursor: pointer;
+  }
+  .cabecalho__search-btn:active, .cabecalho__search-btn:focus{
+    transform: scale(1.2);
+  }
+  .cabecalho__container_items input.activated{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 63.49px;
+    width: 100vw;
+    border-radius: 0;
+    border-top: 1px solid var(--btn-blue);
+    background-color: white;
+    transform-origin: top;
+    animation: barra-de-procurar .3s ease-in-out forwards;
+  }
+  @keyframes barra-de-procurar{
+    0%{
+      transform: scaleY(0);
+    }
+  }
 }
 @media only screen and (max-width: 360px){
 

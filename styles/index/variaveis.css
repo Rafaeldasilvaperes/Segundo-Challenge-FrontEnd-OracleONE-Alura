@@ -34,10 +34,11 @@
   /* PADDINGS e WIDTH/HEIGHT */
   --padding-default: 10.556%;
   
-
   --produtos-cards-width: 100%; /*176px*/
   --produtos-cards-height: 252px; /*252px*/
   --produtos-foto-height: 174px;
+
+  --produto-descricao-width: 560px;
 
   /* CORES */
   --bg-principal: #FFFFFF;
