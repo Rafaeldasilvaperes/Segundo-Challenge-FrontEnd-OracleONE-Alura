@@ -1,4 +1,4 @@
-export function mostra_barra_de_procura(){
+export function mostraInputDeProcurar(){
   const input = document.querySelector('[data-header-search-bar]')
   const lupaIcone = document.querySelector('[data-header-search-icon]')
   

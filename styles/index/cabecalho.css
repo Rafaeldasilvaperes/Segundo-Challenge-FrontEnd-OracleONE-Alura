@@ -98,7 +98,6 @@
     order: 3;
     width: 24px;
     height: 24px;
-    /* background: url(../../img/search.svg) center / cover no-repeat; */
   }
   
   .cabecalho__search-btn{
@@ -116,7 +115,7 @@
     top: 63.49px;
     width: 100vw;
     border-radius: 0;
-    border-top: 1px solid var(--btn-blue);
+    border-top: 4px solid var(--bg-cinza-search-bar);
     background-color: white;
     transform-origin: top;
     animation: barra-de-procurar .3s ease-in-out forwards;

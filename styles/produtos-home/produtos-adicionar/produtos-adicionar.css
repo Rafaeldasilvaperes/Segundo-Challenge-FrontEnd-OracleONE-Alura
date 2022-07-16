@@ -2,11 +2,9 @@
   grid-area: adicionarProduto;
   padding: 64px 30.56%;
 }
-
 .contatos__item:last-child{
   max-width: 100%;
 }
-
 .cabecalho__container_items:last-child a{
   padding: 16px 16px;
 }
