@@ -6,5 +6,4 @@ export function mostraInputDeProcurar(){
   lupaIcone.addEventListener('click', function(){
     input.classList.toggle('activated')
   }, false)
-  
 }
