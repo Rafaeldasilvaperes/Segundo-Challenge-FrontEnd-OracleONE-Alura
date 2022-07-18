@@ -27,10 +27,9 @@ const tabela = document.querySelector('[data-produtos-todos]')
 
 produtosService.listaProdutos()
   .then(data => {
-      data.forEach(elemento => {
+      data.products.forEach(elemento => {
       console.log(elemento)
       tabela.appendChild(criadorDeProduto(elemento))
-
     });
 
   })

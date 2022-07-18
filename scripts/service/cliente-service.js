@@ -1,6 +1,6 @@
 
 const ENDPOINTS = {
-  produtos: "http://localhost:3001/products"
+  produtos: "https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend/backend/db.json"
 }
 
 function listaProdutos(){
