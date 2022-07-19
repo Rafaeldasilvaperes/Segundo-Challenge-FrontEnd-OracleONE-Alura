@@ -5,7 +5,7 @@ const ENDPOINTS = {
 }
 
 function listaProdutos(){
-  return fetch(ENDPOINTS.produtosLocal)
+  return fetch(ENDPOINTS.produtos)
   .then(resposta => {
     return resposta.json()
   })

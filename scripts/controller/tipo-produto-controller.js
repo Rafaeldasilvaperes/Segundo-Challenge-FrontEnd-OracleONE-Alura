@@ -40,7 +40,7 @@ export function filtraProdutoPorCategoria(type, elemento){
 export function appendProdutosPorTipo(){
   produtosService.listaProdutos()
   .then(data => {
-      data.forEach(elemento => {
+      data.products.forEach(elemento => {
         filtraProdutoPorCategoria(elemento.type, elemento)
     });
   })
