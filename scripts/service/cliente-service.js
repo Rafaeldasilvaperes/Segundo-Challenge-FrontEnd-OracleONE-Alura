@@ -1,10 +1,11 @@
 
 const ENDPOINTS = {
-  produtos: "https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend/backend/db.json"
+  produtos: "https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend/backend/db.json",
+  produtosLocal: "http://localhost:3001/products"
 }
 
 function listaProdutos(){
-  return fetch(ENDPOINTS.produtos)
+  return fetch(ENDPOINTS.produtosLocal)
   .then(resposta => {
     return resposta.json()
   })

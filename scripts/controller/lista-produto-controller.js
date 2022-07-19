@@ -7,7 +7,7 @@ export function criadorDeProduto(objeto){
   const produtoTemplate = 
   `
   <article class="produtos__article">
-              <img src="${objeto.image}" alt="" class="produtos__item_imagem">
+              <img src="${objeto.image}" alt="${objeto.alt}" class="produtos__item_imagem">
               <div class="produtos__item_btns_container">
                 <button class="produtos__item_edit_btn"><img src="../img/delete-icon.svg" alt="Deletar Produto"></button>
                 <button class="produtos__item_edit_btn"><img src="../img/edit-icon.svg" alt="Editar Produto"></button>
@@ -20,16 +20,15 @@ export function criadorDeProduto(objeto){
   `
   item.innerHTML = produtoTemplate;
   return item
-  
 }
 
 const tabela = document.querySelector('[data-produtos-todos]')
 
 produtosService.listaProdutos()
   .then(data => {
-      data.products.forEach(elemento => {
-      console.log(elemento)
+      data.forEach(elemento => {
       tabela.appendChild(criadorDeProduto(elemento))
     });
-
   })
+  // Lembrar que o objeto json dentro da promise que vem do github está um caminho a dentro da promise, então use data.products e não só data.
+  // data.products.forEach(elemento =>
