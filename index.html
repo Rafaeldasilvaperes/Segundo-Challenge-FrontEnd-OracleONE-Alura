@@ -76,8 +76,8 @@
       <!--PRODUTOS ROW 1-->
       <h2 aria-label="Categoria Albums de música" class="produtos__categoria">Albums</h2>
       <a aria-label="Ver todos os produtos" class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
-      <ul aria-label="Produtos" class="produtos__container">
-        <li>
+      <ul aria-label="Produtos" class="produtos__container" data-produtos="albums">
+        <!-- <li>
           <article class="produtos__article">
             <a href="./views/produtos-produto.html" class="produtos__item">
               <img src="./img/img-cards/card-img-pinkfloyd.webp" alt class="produtos__item_imagem">
@@ -86,9 +86,9 @@
               <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
             </a>
           </article>
-        </li>
+        </li> -->
 
-        <li>
+        <!-- <li>
           <article class="produtos__article">
             <a href="./views/produtos-produto.html" class="produtos__item">
               <img src="./img/img-cards/card-img-ledzeppelin.webp" alt class="produtos__item_imagem">
@@ -141,9 +141,9 @@
               <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
             </a>
           </article>
-        </li>
+        </li> -->
 
-        <li>
+        <!-- <li>
           <article class="produtos__article">
             <a href="./views/produtos-produto.html" class="produtos__item">
               <img src="./img/img-cards/card-img-ledzeppelin.webp" alt class="produtos__item_imagem">
@@ -152,15 +152,15 @@
               <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
             </a>
           </article>
-        </li>
+        </li> -->
         
       </ul>
       <!--FIM PRODUTOS ROW 1-->
       <!--PRODUTOS ROW 2-->
       <h2 class="produtos__categoria">Camisetas</h2>
       <a aria-label="Ver todos os produtos" class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
-      <ul aria-label="Produtos" class="produtos__container">
-        <li>
+      <ul aria-label="Produtos" class="produtos__container" data-produtos="camisetas">
+        <!-- <li>
           <article class="produtos__article">
             <a href="./views/produtos-produto.html" class="produtos__item">
               <img loading="lazy" src="./img/img-cards/card-img-tshirt.jpg" alt class="produtos__item_imagem">
@@ -224,14 +224,14 @@
               <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
             </a>
           </article>
-        </li>
+        </li> -->
       </ul>
       <!--FIM PRODUTOS ROW 2-->
       <!--PRODUTOS ROW 3-->
       <h2 class="produtos__categoria">Ilustrações</h2>
       <a aria-label="Ver todos os produtos" class="produtos__vertudo" href="./views/produtos-home.html">Ver tudo <i class="bi bi-arrow-right-short seta"></i></a>
-      <ul aria-label="Produtos" class="produtos__container">
-        <li>
+      <ul aria-label="Produtos" class="produtos__container" data-produtos="ilustracoes">
+        <!-- <li>
           <article class="produtos__article">
             <a href="./views/produtos-produto.html" class="produtos__item">
               <img loading="lazy" src="./img/img-cards/card-img-annadrawing.jpeg" alt class="produtos__item_imagem">
@@ -295,7 +295,7 @@
               <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
             </a>
           </article>
-        </li>
+        </li> -->
       </ul>
       <!--FIM PRODUTOS ROW 3-->
     </section>
@@ -355,7 +355,7 @@
     </a>
   </footer>
   <!--FIM RODAPÉ FOOTER-->
-
-  <script src="../scripts/search-btn/search-btn.js" type="text/javascript"></script>
+  <script src="./scripts/controller/tipo-produto-controller.js" type="module"></script>
+  <script src="./scripts/search-btn/search-btn.js" type="text/javascript"></script>
 </body>
 </html>
