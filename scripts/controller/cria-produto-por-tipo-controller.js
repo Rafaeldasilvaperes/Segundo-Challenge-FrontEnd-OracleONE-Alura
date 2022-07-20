@@ -1,5 +1,5 @@
-
 import { produtosService } from '../service/cliente-service.js'
+import { itemClicado } from './conteudo-dinamico-produto.js'
 
 
 function criadorProdutosTiposPrincipais(objeto){
@@ -8,9 +8,9 @@ function criadorProdutosTiposPrincipais(objeto){
   const produtoTemplate = 
   `
           <article class="produtos__article">
-            <a href="./views/produtos-produto.html" class="produtos__item">
+            <a href="./views/produtos-produto.html" class="produtos__item" data-produto>
               <img src="${"."+objeto.image}" alt class="produtos__item_imagem">
-              <h3 class="produtos__item_titulo">${objeto.name}</h3>
+              <h3 class="produtos__item_titulo" data-name>${objeto.name}</h3>
               <h4 class="produtos__item_preco">R$ ${objeto.price}</h4>
               <a href="./views/produtos-produto.html" class="produtos__item_link_ver_mais">Ver produto</a>
             </a>
@@ -18,6 +18,8 @@ function criadorProdutosTiposPrincipais(objeto){
 
   `
   item.innerHTML = produtoTemplate;
+  item.addEventListener("click", itemClicado)
+
   return item
 }
 
@@ -28,7 +30,6 @@ export function filtraProdutoPorCategoria(type, elemento){
   
   dataTipos.forEach(ul =>  {
     if(ul.getAttribute("data-produtos") == type){
-      // console.log(ul)
       return ul.appendChild(criadorProdutosTiposPrincipais(elemento))
     }else{
       return
@@ -45,5 +46,6 @@ export function appendProdutosPorTipo(){
     });
   })
 }
+
 appendProdutosPorTipo();
 
