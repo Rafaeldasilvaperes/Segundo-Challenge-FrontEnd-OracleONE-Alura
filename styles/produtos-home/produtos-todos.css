@@ -21,6 +21,12 @@
 .produtos__item img{
   cursor:auto;
 }
+.produtos__item_titulo{
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp:initial;
+  overflow:auto;
+}
 .produtos__item_btns_container{
   position: absolute;
   z-index: 1;

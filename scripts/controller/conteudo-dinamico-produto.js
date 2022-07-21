@@ -9,8 +9,9 @@ export function itemClicado(e){
   .then(data => {
     data.products.forEach(elemento => {
       if(elemento.name == titleText){
-        return localStorage.setItem("produto", JSON.stringify(elemento))
+        localStorage.setItem("produto", JSON.stringify(elemento))
       }
+      
   });
   })
 }

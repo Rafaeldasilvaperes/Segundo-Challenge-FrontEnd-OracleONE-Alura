@@ -48,6 +48,10 @@
   height: 100%;
   margin-bottom: 6px;
 }
+.produtos__article:hover .produtos__item_preco{
+  color: green;
+  font-size: large;
+}
 .produtos__item, .produtos__item_link_ver_mais{
   text-decoration: none;
   color: var(--color-default);
@@ -59,6 +63,11 @@
 .produtos__item_titulo{
   font-size: var(--fs-content-cards-titulo500);
   line-height: var(--lh-content-cards-titulo500);
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .produtos__item_preco{
   font-size: var(--fs-content-cards-preco-VerProduto700);
@@ -71,7 +80,9 @@
   line-height: var(--lh-content-cards-preco-VerProduto700);
   font-weight: bold;
 }
-.produtos__item_link_ver_mais:hover, .produtos__vertudo:hover, .produtos__item_imagem:hover{
+.produtos__item_link_ver_mais:hover, 
+.produtos__vertudo:hover, 
+.produtos__item_imagem:hover{
   filter: brightness(1.2);
 }
 

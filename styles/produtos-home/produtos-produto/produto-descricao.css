@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 8px;
+  gap: 20px;
 }
 .produto__descricao__titulo{
   font-size: var(--fs-titulo700);
@@ -23,15 +23,17 @@
   font-weight: 500;
 }
 .produto__descricao__subtitulo{
-  font-size: var(--fs-content-cards-preco-VerProduto700);
+  font-size: calc(var(--fs-content-cards-preco-VerProduto700) + 10px);
   line-height: var(--lh-content-cards-preco-VerProduto700);
   font-weight: 700;
+  
 }
 .produto__descricao__texto{
   font-size: var(--fs-content-cards-preco-VerProduto700);
-  line-height: var(--lh-content-cards-preco-VerProduto700);
+  line-height: calc(var(--lh-content-cards-preco-VerProduto700) + 3.5px);
   font-weight: 400;
   text-align: justify;
+  
 }
 
 @media only screen and (max-width: 670px){

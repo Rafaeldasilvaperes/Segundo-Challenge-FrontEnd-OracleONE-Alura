@@ -1,8 +1,14 @@
+import { criadorProdutosTiposPrincipais } from "./cria-produto-por-tipo-controller.js"
+import { produtosService } from '../service/cliente-service.js'
 
 export function criaPaginaProduto(){
   const item = document.querySelector('[data-produto]')
   const produto = JSON.parse(localStorage.getItem('produto'))
   document.title = produto.name
+
+  const dataTipos = document.querySelector(`[data-produtos]`)
+  dataTipos.dataset.produtos = `${produto.type}`
+  produtosRelacionados(produto.type, dataTipos)
 
   const produtoTemplate = 
   `
@@ -19,5 +25,19 @@ export function criaPaginaProduto(){
 
   return item.innerHTML = produtoTemplate
 }
+
+function produtosRelacionados(elementoType, ul){
+  produtosService.listaProdutos()
+  .then(data => {
+      data.products.forEach(elemento => {
+        if(elemento.type == elementoType.type){
+          return ul.appendChild(criadorProdutosTiposPrincipais(elemento, "."))
+        }
+    });
+  })
+}
+
+
+
 
 criaPaginaProduto()
