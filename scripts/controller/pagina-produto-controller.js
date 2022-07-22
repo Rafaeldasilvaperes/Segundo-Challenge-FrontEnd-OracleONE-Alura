@@ -3,15 +3,11 @@ import { produtosService } from '../service/cliente-service.js'
 
 export function criaPaginaProduto(){
   const item = document.querySelector('[data-produto]')
-  console.log("ITEM: ", item)
   const produto = JSON.parse(localStorage.getItem('produto'))
-  console.log("PRODUTO: ", produto)
   document.title = produto.name
 
   const dataTipos = document.querySelector(`[data-produtos]`)
-  console.log("DATA TIPOS: ", dataTipos)
   dataTipos.dataset.produtos = `${produto.type}`
-  console.log("dataTipos: ", dataTipos)
   produtosRelacionados(produto.type, dataTipos)
 
   const produtoTemplate = 
@@ -35,7 +31,7 @@ function produtosRelacionados(elementoType, ul){
   .then(data => {
       data.products.forEach(elemento => {
         if(elemento.type == elementoType){
-          return ul.appendChild(criadorProdutosTiposPrincipais(elemento,"../views/produtos-produto.html" ,".."))
+          return ul.appendChild(criadorProdutosTiposPrincipais(elemento,"./produtos-produto.html" ,".."))
         }
     });
   })
