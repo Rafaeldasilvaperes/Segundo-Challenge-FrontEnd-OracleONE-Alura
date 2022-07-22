@@ -10,7 +10,7 @@ export function filtraProdutoPorCategoria(type, elemento){
   
   dataTipos.forEach(ul =>  {
     if(ul.getAttribute("data-produtos") == type){
-      return ul.appendChild(criadorProdutosTiposPrincipais(elemento, "./views/produtos-produto.html", "../.."))
+      return ul.appendChild(criadorProdutosTiposPrincipais(elemento, "./views/produtos-produto.html", "."))
     }
   }
   )
