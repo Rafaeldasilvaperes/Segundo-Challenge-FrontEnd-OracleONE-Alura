@@ -27,7 +27,7 @@ export function appendTodosProdutos(){
 
   produtosService.listaProdutos()
     .then(data => {
-        data.products.forEach(elemento => {
+        data.forEach(elemento => {
         tabela.appendChild(criadorDeProduto(elemento))
       });
     })

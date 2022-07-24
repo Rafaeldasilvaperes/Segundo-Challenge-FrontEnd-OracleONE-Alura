@@ -5,13 +5,23 @@ const ENDPOINTS = {
 }
 
 function listaProdutos(){
-  return fetch(ENDPOINTS.produtos)
+  return fetch("http://localhost:3001/products")
   .then(resposta => {
     return resposta.json()
   })
 }
+
+function detalhaProduto(id){
+  return fetch(`http://localhost:3001/products/${id}`)
+  .then(resposta => {
+    return resposta.json()
+  })
+}
+
+
 export const produtosService = {
-  listaProdutos
+  listaProdutos,
+  detalhaProduto
 }
 
 
