@@ -7,7 +7,7 @@ export function criadorDeProduto(objeto){
   const produtoTemplate = 
   `
           <article class="produtos__article">
-              <img src="${".."+objeto.image}" alt="${objeto.alt}" class="produtos__item_imagem">
+              <img src="${objeto.image}" alt="${objeto.alt}" class="produtos__item_imagem">
               <div class="produtos__item_btns_container">
                 <button class="produtos__item_edit_btn"><img src="../img/delete-icon.svg" alt="Deletar Produto"></button>
                 <button class="produtos__item_edit_btn"><img src="../img/edit-icon.svg" alt="Editar Produto"></button>

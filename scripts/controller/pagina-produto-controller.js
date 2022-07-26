@@ -18,7 +18,7 @@ export function criaPaginaProduto(){
     const produtoTemplate = 
     `
             <div class="produto__container">
-              <img src="${".."+produto.image}" alt="${produto.alt}" class="produto__img">
+              <img src="${produto.image}" alt="${produto.alt}" class="produto__img">
               <div class="produto__descricao">
                 <h2 class="produto__descricao__titulo">${produto.name}</h2>
                 <h3 class="produto__descricao__subtitulo">R$ ${produto.price}</h3>

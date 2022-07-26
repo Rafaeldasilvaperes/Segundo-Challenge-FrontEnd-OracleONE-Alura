@@ -2,6 +2,34 @@
 
 /* Document
    ========================================================================== */
+/*
+* 1. Changes all the scroll bar styles to one picked by me
+*
+*/
+::-webkit-scrollbar{
+	width: 0.6rem;
+}
+::-webkit-scrollbar-track-piece{
+  background: transparent;
+}
+
+::-webkit-scrollbar-track{
+	background: rgba(165, 155, 155, 0);
+}
+::-webkit-scrollbar-thumb{
+	background: var(--btn-blue);
+}
+::-webkit-scrollbar-thumb:hover{
+	background: var(--btn-hover);
+}
+
+@supports(scrollbar-color: red blue){
+	*{
+		scrollbar-color:var(--btn-blue) var(--bg-principal);
+		scrollbar-width: thin;
+
+	}
+}
 
 /**
  * 1. Correct the line height in all browsers.

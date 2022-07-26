@@ -62,33 +62,43 @@
     <!--LOGIN FORM-->
     <section class="adicionarProduto">
       <div class="contatos__item contatos__item--login">
-        <form class="contatos__form" action="">
+        <form class="contatos__form" action="" data-form>
           <fieldset>
             <legend class="contatos__item_titulo_form | contatos__item_titulo_form--login | contatos__item_titulo_form--adicionar">Adicionar Novo Produto</legend>
 
+            <div class="contatos__item_input_container | contatos__item_input_container--imagem">
+              <label class="input-label" for="imagem">Selecione uma imagem
+                <input accept="image/*" class="input input--adicionar" name="imagem" id="imagem" type="file" placeholder="URL da imagem" required data-url>
+              </label>
+              <div>
+                <span>imagem</span>
+              </div>
+  
+            </div>
+
             <div class="contatos__item_input_container">
-              <input class="input input--adicionar" name="imagem" id="imagem" type="text" placeholder="URL da imagem" required>
-              <label class="input-label" for="imagem">URL da imagem</label>
+              <input class="input input--adicionar" name="alt" id="alt" type="text" placeholder="Descrição da imagem" required data-alt>
+              <label class="input-label" for="alt">Breve descrição da imagem</label>
             </div>
             
             <div class="contatos__item_input_container">
-              <input class="input input--adicionar" name="categoria" id="categoria" type="text" placeholder="Categoria" required>
+              <input class="input input--adicionar" name="categoria" id="categoria" type="text" placeholder="Categoria" required data-tipo>
               <label class="input-label" for="categoria">Categoria</label>
             </div>
             
             <div class="contatos__item_input_container">
-              <input class="input input--adicionar" name="produto" id="produto" type="text" placeholder="Nome do produto" required>
+              <input class="input input--adicionar" name="produto" id="produto" type="text" placeholder="Nome do produto" required data-titulo>
               <label class="input-label" for="produto">Nome do produto</label>
             </div>
 
             <div class="contatos__item_input_container">
-              <input class="input input--adicionar" name="preco" id="preco" type="text" placeholder="Preço do produto" required>
+              <input class="input input--adicionar" name="preco" id="preco" type="text" placeholder="Preço do produto" required data-preco>
               <label class="input-label" for="preco">Preço do produto</label>
             </div>
 
-            <textarea class="textarea" name="" id="" rows="10" placeholder="Descrição do produto"></textarea>
+            <textarea class="textarea" name="" id="" rows="10" placeholder="Descrição do produto" data-textarea-descricao></textarea>
 
-            <input class="submit__btn submit__btn--adicionar" type="submit" value="Adicionar produto">
+            <input class="submit__btn" type="submit" value="Adicionar produto">
           </fieldset>
         </form>
       </div>
@@ -153,6 +163,7 @@
   </footer>
   <!--FIM RODAPÉ FOOTER-->
 
+  <script src="../scripts/controller/adiciona-produto-novo-controller.js" type="module"></script>
   <script src="../scripts/search-btn/search-btn.js" type="text/javascript"></script>
 </body>
 </html>

@@ -11,6 +11,23 @@ function listaProdutos(){
   })
 }
 
+function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
+  return fetch("http://localhost:3001/products", {
+    method: 'POST',
+    headers: { 'Content-Type' : 'application/json' },
+    body: JSON.stringify({ 
+      image: img_URL,
+      alt: alt,
+      type: tipo,
+      name: titulo,
+      price: preco,
+      description: descricao
+     })
+  }).then(resposta => {
+    return resposta.body
+  })
+}
+
 function detalhaProduto(id){
   return fetch(`http://localhost:3001/products/${id}`)
   .then(resposta => {
@@ -21,7 +38,8 @@ function detalhaProduto(id){
 
 export const produtosService = {
   listaProdutos,
-  detalhaProduto
+  detalhaProduto,
+  adicionaProduto
 }
 
 
