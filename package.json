@@ -19,7 +19,6 @@
   "homepage": "https://github.com/Rafaeldasilvaperes/Segundo-Challenge-FrontEnd-OracleONE-Alura#readme",
   "engines": {
     "node": ">= 6.0.0",
-    "npm": ">= 3.0.0",
-    "yarn": "^0.13.0"
+    "npm": ">= 3.0.0"
   }
 }
