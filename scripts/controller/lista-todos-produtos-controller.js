@@ -47,12 +47,12 @@ export function appendTodosProdutos(){
             e.stopImmediatePropagation()
             let escolha = e.target
             if(escolha && escolha == buttonSIM){
-              console.log("APAGOU!", escolha)
+              console.log("APAGOU!")
               deletarProduto(buttonID, evento)
               modalContainer.classList.remove('active')
              
             }else if(escolha && escolha == buttonNAO){
-              console.log("NOPE", escolha)
+              console.log("NOPE")
               modalContainer.classList.remove('active')
             }else if(escolha && escolha == modal || escolha == modal.children){
               console.log("Erro os botões meu filho")

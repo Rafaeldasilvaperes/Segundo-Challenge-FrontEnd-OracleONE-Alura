@@ -5,21 +5,21 @@ const ENDPOINTS = {
 }
 
 function listaProdutos(){
-  return fetch("http://localhost:3001/products")
+  return fetch("https://fake-server-app-alura-music.herokuapp.com/products")
   .then(resposta => {
     return resposta.json()
   })
 }
 
 function detalhaProduto(id){
-  return fetch(`http://localhost:3001/products/${id}`)
+  return fetch(`https://fake-server-app-alura-music.herokuapp.com/products/${id}`)
   .then(resposta => {
     return resposta.json()
   })
 }
 
 function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
-  return fetch("http://localhost:3001/products", {
+  return fetch("https://fake-server-app-alura-music.herokuapp.com/products", {
     method: 'POST',
     headers: { 'Content-Type' : 'application/json' },
     body: JSON.stringify({ 
@@ -36,7 +36,7 @@ function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
 }
 
 function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
-  return fetch(`http://localhost:3001/products/${id}`, {
+  return fetch(`https://fake-server-app-alura-music.herokuapp.com/products/${id}`, {
     method: 'PUT',
     headers: {
       'Content-type' : 'application/json'
@@ -56,7 +56,7 @@ function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
 }
 
 function removeProduto(id){
-  return fetch(`http://localhost:3001/products/${id}`, {
+  return fetch(`https://fake-server-app-alura-music.herokuapp.com/products/${id}`, {
     method: 'DELETE'
   })
 }
