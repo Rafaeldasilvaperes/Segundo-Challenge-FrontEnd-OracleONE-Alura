@@ -11,6 +11,13 @@ function listaProdutos(){
   })
 }
 
+function detalhaProduto(id){
+  return fetch(`http://localhost:3001/products/${id}`)
+  .then(resposta => {
+    return resposta.json()
+  })
+}
+
 function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
   return fetch("http://localhost:3001/products", {
     method: 'POST',
@@ -28,18 +35,38 @@ function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
   })
 }
 
-function detalhaProduto(id){
-  return fetch(`http://localhost:3001/products/${id}`)
+function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
+  return fetch(`http://localhost:3001/products/${id}`, {
+    method: 'PUT',
+    headers: {
+      'Content-type' : 'application/json'
+    },
+    body: JSON.stringify({
+      image: img_URL,
+      alt: alt,
+      type: tipo,
+      name: titulo,
+      price: preco,
+      description: descricao
+    })
+  })
   .then(resposta => {
     return resposta.json()
   })
 }
 
+function removeProduto(id){
+  return fetch(`http://localhost:3001/products/${id}`, {
+    method: 'DELETE'
+  })
+}
 
 export const produtosService = {
   listaProdutos,
   detalhaProduto,
-  adicionaProduto
+  adicionaProduto,
+  removeProduto,
+  atualizaProduto
 }
 
 

@@ -22,11 +22,12 @@ formulario.addEventListener('submit', (evento)=>{
 })
 
 function pegaStringDaImagem(){
-
+  var previewImagem = document.querySelector('[data-span-imagem]')
   const reader = new FileReader();
   reader.addEventListener('load', () =>{
     uploaded_image = reader.result;
-    
+    previewImagem.style.backgroundImage = `url(${uploaded_image})`;
+
   })
   reader.readAsDataURL(this.files[0])
   

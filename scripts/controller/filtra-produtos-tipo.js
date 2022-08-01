@@ -24,4 +24,3 @@ export function appendProdutosPorTipo(){
 
 appendProdutosPorTipo();
 
-// use data.products for method get on github pages

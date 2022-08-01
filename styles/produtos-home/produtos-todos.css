@@ -66,6 +66,67 @@
   color: var(--color-default);
 }
 
+
+.modal-container{
+  position: fixed;
+  z-index: 11;
+  background-color: rgba(0, 0, 0, 0.5);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: none;
+  visibility: hidden;
+}
+.modal-container.active{
+  display: flex;
+  visibility: visible;
+}
+.modal-wrapper{
+  font-size: 8px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  background-color: white;
+  z-index: 10;
+  padding: 30px 25px;
+  
+  justify-content: center;
+  
+  align-items: center;
+  border: 1px solid grey;
+  border-radius: 4px;
+}
+.modal-wrapper > div{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.modal-wrapper div button{
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  border: none;
+  background-color: var(--btn-blue);
+  color: white;
+  cursor: pointer;
+}
+.modal-wrapper div button:nth-child(1){
+  background-color: white;
+  color: var(--btn-blue);
+  border: 1px solid var(--btn-blue);
+}
+.modal-wrapper div button:nth-child(1):hover{
+  color: white;
+}
+.modal-wrapper div button:hover{
+  background-color: var(--btn-hover);
+}
+.modal-wrapper div button:active{
+  background-color: orangered;
+}
+
 @media only screen and (max-width: 1200px){
   .produtos__container{
     grid-template-columns: repeat(5, 1fr);
