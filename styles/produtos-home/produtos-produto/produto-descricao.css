@@ -16,6 +16,11 @@
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;        
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens:auto;
 }
 .produto__descricao__titulo{
   font-size: var(--fs-titulo700);
@@ -39,9 +44,11 @@
 @media only screen and (max-width: 670px){
   .produto__container{
     flex-direction: column;
+
   }
   .produto-descricao{
     padding: 0 0 0;
+    
   }
   .produto__descricao{
     padding: 0 var(--padding-default) 0;

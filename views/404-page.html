@@ -4,24 +4,20 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alura Store | Adicionar Produto</title>
+  <title>Alura Store | Login</title>
   <!--CSS REUTILIZADO-->
   <link href="../styles/index/reset.css" rel="stylesheet">
   <link href="../styles/index/normalize.css" rel="stylesheet">
   <link href="../styles/index/variaveis.css" rel="stylesheet">
   <link href="../styles/index/cabecalho.css" rel="stylesheet">
   <link href="../styles/index/contato.css" rel="stylesheet">
-  <link href="../styles/home-login/login.css" rel="stylesheet">
-  <link href="../styles/home-login/cabecalho-login.css" rel="stylesheet">
   <!--CSS RODAPE-->
   <link href="../styles/index/rodape.css" rel="stylesheet">
-  <!--CSS BASE INDEX-->
+  <!--CSS BASE-->
   <link href="../styles/index/base-index.css" rel="stylesheet">
-  <!--CSS BASE PRODUTO ADICIONAR-->
-  <link href="../styles/produtos-home/produtos-adicionar/base-produto-adicionar.css" rel="stylesheet">
-
-  <!--CSS PRODUTO ADICIONAR-->
-  <link href="../styles/produtos-home/produtos-adicionar/produtos-adicionar.css" rel="stylesheet">
+  <!--CSS 404-->
+  <link href="../styles/404/404.css" rel="stylesheet">
+  <link href="../styles/404/base-404.css" rel="stylesheet">
 
   <!--VARIAVEIS RESPONSIVO-->
   <link href="../styles/variaveis-responsivo/variaveis-responsivo.css" rel="stylesheet">
@@ -50,7 +46,7 @@
           <input placeholder="O que deseja encontrar?" type="search" class="cabecalho__search_bar" data-header-search-bar>
         </li>
         <li class="cabecalho__container_items">
-          <a aria-label="Botão Menu administrador" href="produtos-adicionar.html" class="cabecalho__btn_login cabecalho__btn_login--admin">Menu administrador</a>
+          <a aria-label="Botão Entrar" href="home-login.html" class="cabecalho__btn_login">Login</a>
         </li>
       </ul>
     </nav>
@@ -59,62 +55,12 @@
 
   <!--MAIN CONTEÚDO-->
   <main class="conteudo">
-    <!--LOGIN FORM-->
-    <section class="adicionarProduto">
-      <div class="contatos__item contatos__item--login">
-        <form class="contatos__form" action="" data-form>
-          <fieldset>
-            <legend class="contatos__item_titulo_form | contatos__item_titulo_form--login | contatos__item_titulo_form--adicionar">Adicionar Novo Produto</legend>
-
-            <!--IMAGEM INPUT + DIV PREVIA-->
-            <div class="contatos__item_input_container | contatos__item_input_container--imagem">
-              <div data-span-imagem></div>
-              <label class="input-label input-label--imagem" for="imagem">Procurar
-                  <input accept="image/*" class="input input--adicionar" name="imagem" id="imagem" type="file" placeholder="URL da imagem" required data-url>
-              </label>
-            </div>
-
-            <!--ALT DA IMAGEM INPUT ♫-->
-            <div class="contatos__item_input_container">
-              <input class="input input--adicionar" pattern="^[a-zA-Z\u00C0-\u00FF -,?.!]*$" name="alt" id="alt" type="text" placeholder="Descrição da imagem" required maxlength="150" data-alt>
-              <label class="input-label" for="alt">Breve descrição da imagem</label>
-            </div>
-            
-            <!--CATEGORIA PRODUTO INPUT ♫-->
-            <div class="contatos__item_input_container">
-              <!-- <input class="input input--adicionar" name="categoria" id="categoria" type="text" placeholder="Categoria" required data-tipo> -->
-              <select class="input input--adicionar" name="categoria" id="categoria" type="text" placeholder="Categoria" required data-tipo>
-                <option value="albums">Albums</option>
-                <option value="camisetas">Camisetas</option>
-                <option value="ilustracoes">Ilustrações</option>
-              </select>
-              <label class="input-label" for="categoria">Categoria</label>
-            </div>
-            
-            <!--NOME PRODUTO INPUT -->
-            <div class="contatos__item_input_container">
-              <input class="input input--adicionar" maxlength="100
-              " name="produto" id="produto" type="text" placeholder="Nome do produto" required data-titulo>
-              <label class="input-label" for="produto">Nome do produto</label>
-            </div>
-
-            <!--PREÇO PRODUTO INPUT-->
-            <div class="contatos__item_input_container">
-              <input class="input input--adicionar" name="preco" id="preco" type="text" placeholder="Preço do produto" required data-preco>
-              <label class="input-label" for="preco">Preço do produto</label>
-            </div>
-
-            <!--DESCRIÇÃO PRODUTO TEXTAREA-->
-            <textarea pattern="^([^\s-]{5})([^\s-]{5})*$" class="textarea" name="" id="" rows="10" placeholder="Descrição do produto" maxlength="1100" data-textarea-descricao>&shy;</textarea>
-
-            <input class="submit__btn" type="submit" value="Adicionar produto">
-          </fieldset>
-        </form>
-      </div>
+    
+    <!--404-->
+    <section class="fourOfour__message">
+      <img src="../img/404-img.jpeg" alt="">
     </section>
-    <!--FIM LOGIN FORM-->
-
-
+    <!--FIM 404-->
 
     <!--CONTATO CONTACT-->
     <section class="contatos" data-section-contatos>
@@ -139,17 +85,16 @@
           </li>
 
           <li class="contatos__item">
-            <h2 class="contatos__item_titulo_form">Fale conosco</h2>
             <form action="">
               <fieldset>
-
+                <legend><h2 class="contatos__item_titulo_form">Fale conosco</h2></legend>
                 <div class="contatos__item_input_container">
                   <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
                   <label class="input-label" for="nome">Nome: </label>
                 </div>
 
-                <label for=""></label>
-                <textarea class="textarea" name="" id="" placeholder="Escreva sua mensagem" rows="10" required></textarea>
+                <label aria-label="Escreva sua Mensagem" for="contatoMensagem"></label>
+                <textarea class="textarea" name="" id="contatoMensagem" placeholder="Escreva sua mensagem" rows="10" required></textarea>
                 <div>
                   <input class="submit__btn" type="submit" value="Enviar mensagem">
                 </div>
@@ -172,8 +117,6 @@
   </footer>
   <!--FIM RODAPÉ FOOTER-->
 
-  <script src="../scripts/controller/adiciona-produto-novo-controller.js" type="module"></script>
   <script src="../scripts/search-btn/search-btn.js" type="text/javascript"></script>
-  <script src="https://github.com/codermarcos/simple-mask-money/releases/download/v3.0.0/simple-mask-money.js"></script>
 </body>
 </html>

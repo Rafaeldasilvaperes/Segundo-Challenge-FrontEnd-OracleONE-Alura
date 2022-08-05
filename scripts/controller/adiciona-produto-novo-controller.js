@@ -5,6 +5,15 @@ const formulario = document.querySelector('[data-form]')
 var uploaded_image = '';
 const url = document.querySelector('[data-url]')
 uploaded_image = url.addEventListener('change', pegaStringDaImagem)
+const precoMascara = document.querySelector('[data-preco]')
+SimpleMaskMoney.setMask(preco, {
+  prefix: 'R$ ',
+  fixed: true,
+  fractionDigits: 2,
+  decimalSeparator: ',',
+  thousandsSeparator: '.',
+  cursor: 'end'
+})
 
 formulario.addEventListener('submit', (evento)=>{
   evento.preventDefault()
@@ -12,7 +21,7 @@ formulario.addEventListener('submit', (evento)=>{
   const alt = evento.target.querySelector('[data-alt]').value
   const tipo = evento.target.querySelector('[data-tipo]').value
   const titulo = evento.target.querySelector('[data-titulo]').value
-  const preco = evento.target.querySelector('[data-preco]').value
+  const preco = precoMascara.value
   const descricao = evento.target.querySelector('[data-textarea-descricao]').value
 
   produtosService.adicionaProduto(uploaded_image, alt, tipo, titulo, preco, descricao)

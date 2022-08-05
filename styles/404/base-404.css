@@ -1,0 +1,8 @@
+.conteudo{
+  grid-area: conteudo;
+  display: grid;
+  gap: 0px;
+  grid-template-areas: 
+  "fourOfour__message"
+  "contatos";
+}

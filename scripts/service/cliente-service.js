@@ -1,25 +1,26 @@
 
 const ENDPOINTS = {
   produtos: "https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend/backend/db.json",
-  produtosLocal: "http://localhost:3001/products"
+  produtosLocal: "http://localhost:3000/products/",
+  Heroku: "https://fake-server-app-alura-music.herokuapp.com/products/"
 }
 
 function listaProdutos(){
-  return fetch("https://fake-server-app-alura-music.herokuapp.com/products")
+  return fetch(ENDPOINTS.produtosLocal)
   .then(resposta => {
     return resposta.json()
   })
 }
 
 function detalhaProduto(id){
-  return fetch(`https://fake-server-app-alura-music.herokuapp.com/products/${id}`)
+  return fetch(`${ENDPOINTS.produtosLocal}${id}`)
   .then(resposta => {
     return resposta.json()
   })
 }
 
 function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
-  return fetch("https://fake-server-app-alura-music.herokuapp.com/products", {
+  return fetch(ENDPOINTS.produtosLocal, {
     method: 'POST',
     headers: { 'Content-Type' : 'application/json' },
     body: JSON.stringify({ 
@@ -36,7 +37,7 @@ function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
 }
 
 function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
-  return fetch(`https://fake-server-app-alura-music.herokuapp.com/products/${id}`, {
+  return fetch(`${ENDPOINTS.produtosLocal}${id}`, {
     method: 'PUT',
     headers: {
       'Content-type' : 'application/json'
@@ -56,7 +57,7 @@ function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
 }
 
 function removeProduto(id){
-  return fetch(`https://fake-server-app-alura-music.herokuapp.com/products/${id}`, {
+  return fetch(`${ENDPOINTS.produtosLocal}${id}`, {
     method: 'DELETE'
   })
 }
