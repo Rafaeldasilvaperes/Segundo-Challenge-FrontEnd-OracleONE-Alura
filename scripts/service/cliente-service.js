@@ -6,21 +6,21 @@ const ENDPOINTS = {
 }
 
 function listaProdutos(){
-  return fetch(ENDPOINTS.produtosLocal)
+  return fetch(ENDPOINTS.Heroku)
   .then(resposta => {
     return resposta.json()
   })
 }
 
 function detalhaProduto(id){
-  return fetch(`${ENDPOINTS.produtosLocal}${id}`)
+  return fetch(`${ENDPOINTS.Heroku}${id}`)
   .then(resposta => {
     return resposta.json()
   })
 }
 
 function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
-  return fetch(ENDPOINTS.produtosLocal, {
+  return fetch(ENDPOINTS.Heroku, {
     method: 'POST',
     headers: { 'Content-Type' : 'application/json' },
     body: JSON.stringify({ 
@@ -37,7 +37,7 @@ function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
 }
 
 function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
-  return fetch(`${ENDPOINTS.produtosLocal}${id}`, {
+  return fetch(`${ENDPOINTS.Heroku}${id}`, {
     method: 'PUT',
     headers: {
       'Content-type' : 'application/json'
@@ -57,7 +57,7 @@ function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
 }
 
 function removeProduto(id){
-  return fetch(`${ENDPOINTS.produtosLocal}${id}`, {
+  return fetch(`${ENDPOINTS.Heroku}${id}`, {
     method: 'DELETE'
   })
 }

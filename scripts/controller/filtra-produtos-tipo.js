@@ -11,9 +11,12 @@ export function filtraProdutoPorCategoria(type, elemento){
     }
   }
   )
+  const buffer = document.getElementById('buffer')
+  buffer.classList.remove('active')
 }
 
 export function appendProdutosPorTipo(){
+  
   produtosService.listaProdutos()
   .then(data => {
       data.forEach(elemento => {
