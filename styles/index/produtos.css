@@ -7,6 +7,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
   gap: 16px;
+  
+  
 }
 .produtos__categoria{
   font-size: var(--fs-content-titulo700);
@@ -34,6 +36,7 @@
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(6, 1fr);
+  
 }
 .produtos__container li:nth-child(n+7){
   display: none;
@@ -43,6 +46,7 @@
 }
 .produtos__container li{
   max-width: 214px;
+
 }
 .produtos__article{
   width: 100%;
@@ -115,7 +119,6 @@
 .buffer.active{
   display: block;
 }
-
 .spinning__buffer::before {
   animation: 1.5s linear infinite spinner;
   animation-play-state: inherit;
@@ -132,13 +135,6 @@
   transform: translate3d(-50%, -50%, 0);
   will-change: transform;
 }
-
-
-
-
-
-
-
 
 @media only screen and (max-width: 1900px){
   :root{
@@ -172,5 +168,9 @@
   .produtos__container{
     grid-template-columns: repeat(2, 1fr);
   }
-  
+  .produtos__container li{
+    
+    min-width: 174px;
+    
+  }
 }

@@ -12,7 +12,7 @@ export function filtraProdutoPorCategoria(type, elemento){
   }
   )
   const buffer = document.getElementById('buffer')
-  buffer.classList.remove('active')
+  buffer.classList.remove('active') // retira página de buffering após carregamento de conteúdo
 }
 
 export function appendProdutosPorTipo(){
