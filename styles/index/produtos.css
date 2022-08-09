@@ -169,7 +169,6 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .produtos__container li{
-    
     min-width: 174px;
     
   }
