@@ -6,54 +6,97 @@
 }
 
 .filtros{
-  background-color: rgb(12, 93, 93);
-  height: 100%;
+  /* border: 1px solid green; */
+  padding-top: 55px;
+  color: rgb(143, 143, 143);
+  height: calc(100% - 53.56px);
   width: 20%;
 }
+.filtros__titulo{
+  margin-bottom: 50px;
+  text-align: center;
+  font-size: var(--fs-login-titulo700);
+  line-height: var(--lh-login-titulo700);
+  font-weight: 400;
+}
+.filtros hr{
+  background-color: rgb(224, 224, 224);
+  height: 2px;
+  border: none;
+  margin-bottom: 20px;
+}
+.filtro{
+  font-size: var(--fs-content-cards-preco-VerProduto700);
+  line-height: var(--lh-content-cards-preco-VerProduto700);
+  font-weight: 700;
+  margin: 15px 0;
+}
+.filtro__item{
+  margin: 10px 0;
+}
+.filtro__item_link{
+  font-size: calc(var(--fs-content-cards-titulo500) + 2px);
+  line-height: var(--lh-content-cards-titulo500);
+  font-weight: 500;
+  text-decoration: none;
+  color: rgb(143, 143, 143);
+}
+.filtro__item_link:hover{
+  color: rgb(64, 64, 64);
+}
+
 
 .produtos{
   padding: 0;
-  
 }
-
+.produtos__categoria{
+  grid-column: span 2;
+  text-align: center;
+  margin: 10px 0;
+  opacity: 0.5;
+}
+.produtos__container--todos_public{
+  grid-column: span 2;
+  display: grid;
+  gap: 25px;
+  grid-template-columns: repeat(auto-fit, minmax(174px, 214px));
+  justify-content: center;
+}
+.produtos-filtros-container .produtos-todos-public{
+  padding: 0;
+  flex-grow: 2;
+}
 .produtos__article{
   background-color: white;
   border-radius: 5px;
 }
+.produtos__article:hover, .produtos__article a:focus{
+  transform: scale(1.05);
+}
+.produtos__article:focus-within{
+  
+  transform: scale(1.05);
+  outline: none;
+  border: 1px solid var(--btn-hover);
+  -webkit-box-shadow: 0px 0px 10px -4px var(--btn-hover); 
+  box-shadow: 0px 0px 10px -4px var(--btn-hover);
+}
+.produtos__item:focus{
+  outline: none;
+}
 .produtos__item_imagem{
   border-radius: 5px 5px 0 0;
 }
-
-
-
+.produtos__item_imagem:hover{
+  filter: brightness(1);
+}
 .produtos__item_titulo,
 .produtos__item_preco,
 .produtos__item_link_ver_mais{
   padding-left: 10px;
 }
-
 .produtos__article hr{
-  color: var(--bg-produtos-cinza);
   background-color: var(--bg-produtos-cinza);
   height: 2px;
   border: none;
-  
-}
-
-.produtos__categoria{
-  grid-column: span 2;
-  text-align: center;
-}
-
-.produtos-filtros-container .produtos-todos-public{
-  padding: 0;
-  flex-grow: 2;
-  
-}
-
-.produtos__container--todos_public{
-  grid-column: span 2;
-  display: grid;
-  gap: 25px;
-  grid-template-columns: repeat(4, 1fr);
 }
