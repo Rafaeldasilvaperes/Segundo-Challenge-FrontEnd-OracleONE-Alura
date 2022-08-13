@@ -3,6 +3,7 @@ import { produtosService } from '../service/cliente-service.js'
 export function criadorDeProduto(objeto){
   
   const item = document.createElement('li')
+  item.classList.add('produtos__container_lista')
 
   const produtoTemplate = 
   `
@@ -69,12 +70,12 @@ export function appendTodosProdutos(){
     })
   }
 
-function deletarProduto(id, eventoProdutoClicado){
-  const liDoProduto = eventoProdutoClicado.target.closest('li')
-  produtosService.removeProduto(id)
-  .then(()=>{
-    liDoProduto.remove()
-  })
+  function deletarProduto(id, eventoProdutoClicado){
+    const liDoProduto = eventoProdutoClicado.target.closest('li')
+    produtosService.removeProduto(id)
+    .then(()=>{
+      liDoProduto.remove()
+    })
 }
 
 appendTodosProdutos()

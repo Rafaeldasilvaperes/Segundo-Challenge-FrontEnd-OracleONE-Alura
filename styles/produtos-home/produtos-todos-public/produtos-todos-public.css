@@ -45,7 +45,6 @@
   color: rgb(64, 64, 64);
 }
 
-
 .produtos{
   padding: 0;
 }
@@ -56,6 +55,7 @@
   opacity: 0.5;
 }
 .produtos__container--todos_public{
+  
   grid-column: span 2;
   display: grid;
   gap: 25px;
@@ -63,6 +63,7 @@
   justify-content: center;
 }
 .produtos-filtros-container .produtos-todos-public{
+  
   padding: 0;
   flex-grow: 2;
 }
@@ -99,4 +100,10 @@
   background-color: var(--bg-produtos-cinza);
   height: 2px;
   border: none;
+}
+
+@media only screen and (max-width: 700px){
+  .filtros{
+    display: none;
+  }
 }
