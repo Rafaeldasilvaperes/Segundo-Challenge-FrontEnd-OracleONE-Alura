@@ -4,9 +4,7 @@
   gap: 25px;
   justify-content: space-between;
 }
-
 .filtros{
-  /* border: 1px solid green; */
   padding-top: 55px;
   color: rgb(143, 143, 143);
   height: calc(100% - 53.56px);
@@ -91,6 +89,9 @@
 .produtos__item_imagem:hover{
   filter: brightness(1);
 }
+.produtos__item_titulo--all{
+  -webkit-line-clamp: 4;
+}
 .produtos__item_titulo,
 .produtos__item_preco,
 .produtos__item_link_ver_mais{
@@ -105,5 +106,13 @@
 @media only screen and (max-width: 700px){
   .filtros{
     display: none;
+  }
+}
+
+@media only screen and (max-width: 485px){
+  .produtos__container--todos_public{
+  
+    grid-template-columns: repeat(2, minmax(50px, 214px));
+    gap: 8px;
   }
 }
