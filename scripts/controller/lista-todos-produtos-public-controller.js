@@ -32,11 +32,6 @@ function appendTodosProdutosPaginaFiltros(){
       tabela.appendChild(criadorDeProdutoPaginaFiltros(elemento))
     });
   })
-
-  // const buffer = document.getElementById('buffer2')
-  // buffer.classList.remove('active') 
-  // retira página de buffering após carregamento de conteúdo
-
 }
 
 appendTodosProdutosPaginaFiltros()
