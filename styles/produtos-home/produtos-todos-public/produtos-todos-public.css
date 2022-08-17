@@ -65,6 +65,10 @@
   padding: 0;
   flex-grow: 2;
 }
+.produto__invisivel{
+  display: none;
+}
+
 .produtos__article{
   background-color: white;
   border-radius: 5px;
@@ -111,7 +115,6 @@
 
 @media only screen and (max-width: 485px){
   .produtos__container--todos_public{
-  
     grid-template-columns: repeat(2, minmax(50px, 214px));
     gap: 8px;
   }

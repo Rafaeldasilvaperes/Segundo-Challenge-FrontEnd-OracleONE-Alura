@@ -22,7 +22,7 @@ export function criadorDeProdutoPaginaFiltros(objeto){
 
 }
 
-function appendTodosProdutosPaginaFiltros(){
+export function appendTodosProdutosPaginaFiltros(){
 
   const tabela = document.querySelector('[data-lista-de-produtos]')
 
@@ -34,4 +34,4 @@ function appendTodosProdutosPaginaFiltros(){
   })
 }
 
-appendTodosProdutosPaginaFiltros()
+// appendTodosProdutosPaginaFiltros()
