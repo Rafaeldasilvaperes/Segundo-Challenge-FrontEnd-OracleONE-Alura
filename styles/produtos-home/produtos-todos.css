@@ -15,7 +15,7 @@
 .produtos__article:nth-last-child(-n+6){
   margin-bottom: 0;
 }
-.produtos__container li:nth-child(n){
+.produtos__container .produtos__container_lista:nth-child(n){
   display: block;
 }
 .produtos__item img{
@@ -67,7 +67,7 @@
 }
 
 
-.modal-container{
+.modal__container{
   position: fixed;
   z-index: 11;
   background-color: rgba(0, 0, 0, 0.5);
@@ -78,11 +78,11 @@
   display: none;
   visibility: hidden;
 }
-.modal-container.active{
+.modal__container.active{
   display: flex;
   visibility: visible;
 }
-.modal-wrapper{
+.modal__wrapper{
   font-size: 8px;
   position: absolute;
   left: 50%;
@@ -98,12 +98,12 @@
   border: 1px solid grey;
   border-radius: 4px;
 }
-.modal-wrapper > div{
+.modal__wrapper > div{
   display: flex;
   justify-content: center;
   gap: 20px;
 }
-.modal-wrapper div button{
+.modal__wrapper div button{
   width: 100px;
   height: 30px;
   font-size: 16px;
@@ -112,18 +112,18 @@
   color: white;
   cursor: pointer;
 }
-.modal-wrapper div button:nth-child(1){
+.modal__wrapper div button:nth-child(1){
   background-color: white;
   color: var(--btn-blue);
   border: 1px solid var(--btn-blue);
 }
-.modal-wrapper div button:nth-child(1):hover{
+.modal__wrapper div button:nth-child(1):hover{
   color: white;
 }
-.modal-wrapper div button:hover{
+.modal__wrapper div button:hover{
   background-color: var(--btn-hover);
 }
-.modal-wrapper div button:active{
+.modal__wrapper div button:active{
   background-color: orangered;
 }
 

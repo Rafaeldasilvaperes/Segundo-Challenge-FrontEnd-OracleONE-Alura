@@ -1,6 +1,7 @@
 
 export function criadorProdutosTiposPrincipais(objeto, id, stringDotsPath){
   const item = document.createElement('li')
+  item.classList.add('produtos__container_lista')
   
   const produtoTemplate = 
   `
