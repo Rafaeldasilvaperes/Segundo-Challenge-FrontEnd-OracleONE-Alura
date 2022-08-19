@@ -46,7 +46,10 @@
         </li>
         <li class="cabecalho__container_items">
           <img class="cabecalho__search-btn" src="../img/search.svg" alt="Luneta para pesquisa" data-header-search-icon>
-          <input placeholder="O que deseja encontrar?" type="search" class="cabecalho__search_bar" data-header-search-bar>
+          <form>
+            <input placeholder="O que deseja encontrar?" id="searchField" type="text" class="cabecalho__search_bar" data-header-search-bar>
+            <button type="button" title="search" class="cabecalho__search_bar_button"></button>
+          </form>
         </li>
         <li class="cabecalho__container_items">
           <a aria-label="Botão Entrar" href="home-login.html" class="cabecalho__btn_login">Login</a>

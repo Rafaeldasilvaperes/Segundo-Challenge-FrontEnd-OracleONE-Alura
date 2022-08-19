@@ -142,6 +142,7 @@
 
   .cabecalho__search_bar_button{
     display: none;
+    visibility: hidden;
   }
 
   @keyframes barra-de-procurar{
