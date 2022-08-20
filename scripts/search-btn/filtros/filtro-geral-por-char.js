@@ -2,7 +2,7 @@ export function filtroPorChar(){
   const inputPesquisar = document.querySelector('[data-header-search-bar]')
   const lupaPesquisar = document.querySelector('[data-header-search-btn]')
 
-  lupaPesquisar.addEventListener('click', aposEnterOuClick);
+  lupaPesquisar.addEventListener('click', aposEnterOuClick); 
   inputPesquisar.addEventListener('keypress', function(e){
     if (e.key === 'Enter' || e.key === 13){
       aposEnterOuClick();

@@ -43,22 +43,65 @@
   color: rgb(64, 64, 64);
 }
 
-.produtos{
-  padding: 0;
+.loading{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 99;
+  background-color: var(--bg-produtos-cinza);
+  display: none;
 }
-.produtos__categoria{
-  grid-column: span 2;
-  text-align: center;
-  margin: 10px 0;
-  opacity: 0.5;
+.loading.active{
+  display: block;
 }
+@keyframes spinner {
+  0% {
+    transform: translate3d(-50%, -50%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+  }
+}
+.loading__spinner{
+  animation: 1.5s linear infinite spinner;
+  animation-play-state: inherit;
+  border: solid 5px #cfd0d1;
+  border-bottom-color: #1c87c9;
+  border-radius: 50%;
+  content: "";
+  height: 40px;
+  width: 40px;
+  position: relative;
+  z-index: 99;
+  top: 40%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  will-change: transform;
+}
+
 .produtos__container--todos_public{
-  
   grid-column: span 2;
   display: grid;
   gap: 25px;
   grid-template-columns: repeat(auto-fit, minmax(174px, 214px));
   justify-content: center;
+}
+.produtos{
+  padding: 0;
+  position: relative;
+}
+.produtos.active{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.produtos__categoria{
+  grid-column: span 2;
+  text-align: center;
+  margin: 10px 0;
+  opacity: 0.5;
 }
 .produtos-filtros-container .produtos-todos-public{
   

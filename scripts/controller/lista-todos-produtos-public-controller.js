@@ -1,9 +1,8 @@
 import { produtosService } from '../service/cliente-service.js'
 
 export function criadorDeProdutoPaginaFiltros(objeto){
-
+  
   const item = document.createElement('li')
-
   const produtoTemplate = 
   `
   <article class="produtos__article">
@@ -31,7 +30,10 @@ export function appendTodosProdutosPaginaFiltros(){
       data.forEach(elemento => {
       tabela.appendChild(criadorDeProdutoPaginaFiltros(elemento))
     });
+  }).then(()=>{
+    const buffer = document.getElementById('loading')
+    const telaProdutos = document.getElementById('produtos')
+    telaProdutos.classList.remove('active')
+    buffer.classList.remove('active')
   })
 }
-
-// appendTodosProdutosPaginaFiltros()
