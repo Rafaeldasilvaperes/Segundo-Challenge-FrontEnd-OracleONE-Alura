@@ -23,13 +23,14 @@ export function filtroPorValor(){
       let preco = parseInt(produtoPrice.getAttribute('data-price'))
       let valorFiltro = parseInt(valorMax)
       console.log(preco, valorFiltro)
-      if(preco <= valorFiltro && preco >= (valorFiltro - 150)){
-        console.log("É")
+      if(preco <= valorFiltro && valorFiltro <= 1000){
         produto.closest('li').classList.remove('produto__invisivel')
+        }else if(valorFiltro == 1001 && preco >= 1000){
+          produto.closest('li').classList.remove('produto__invisivel')
         }else{
-          console.log("NÃO É")
           produto.closest('li').classList.add('produto__invisivel')
         }
+      
     })
 
   }
