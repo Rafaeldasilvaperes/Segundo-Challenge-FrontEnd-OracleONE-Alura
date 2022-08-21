@@ -17,12 +17,7 @@
   line-height: var(--lh-login-titulo700);
   font-weight: 400;
 }
-.filtros hr{
-  background-color: rgb(224, 224, 224);
-  height: 2px;
-  border: none;
-  margin-bottom: 20px;
-}
+
 .filtro{
   font-size: var(--fs-content-cards-preco-VerProduto700);
   line-height: var(--lh-content-cards-preco-VerProduto700);
@@ -84,7 +79,9 @@
 .produtos__container--todos_public{
   grid-column: span 2;
   display: grid;
-  gap: 25px;
+  row-gap: 50px;
+  column-gap: 25px;
+  /* gap: 25px; */
   grid-template-columns: repeat(auto-fit, minmax(174px, 214px));
   justify-content: center;
 }
@@ -159,6 +156,7 @@
 @media only screen and (max-width: 485px){
   .produtos__container--todos_public{
     grid-template-columns: repeat(2, minmax(50px, 214px));
-    gap: 8px;
+    row-gap: 40px;
+    column-gap: 8px;
   }
 }

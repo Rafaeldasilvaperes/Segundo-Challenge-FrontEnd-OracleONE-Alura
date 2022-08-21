@@ -1,9 +1,11 @@
 import { appendTodosProdutosPaginaFiltros } from '../../controller/lista-todos-produtos-public-controller.js'
 import { filtroPorChar } from '../filtros/filtro-geral-por-char.js'
+import { filtroPorValor } from '../filtros/filtro-por-valor.js'
 
 
-appendTodosProdutosPaginaFiltros()
-filtroPorChar()
+appendTodosProdutosPaginaFiltros();
+filtroPorChar();
+filtroPorValor();
 
 
 
