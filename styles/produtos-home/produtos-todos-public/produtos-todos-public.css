@@ -12,10 +12,11 @@
 }
 .filtros__titulo{
   margin-bottom: 50px;
-  text-align: center;
+  text-align: left;
   font-size: var(--fs-login-titulo700);
   line-height: var(--lh-login-titulo700);
   font-weight: 400;
+  cursor: pointer;
 }
 
 .filtro{
