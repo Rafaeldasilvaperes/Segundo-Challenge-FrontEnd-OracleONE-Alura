@@ -1,8 +1,9 @@
 export function filtroPorValor(){
   const filtrosOpcoes = document.querySelector('[data-filtro-preco]')
   const tags = filtrosOpcoes.getElementsByTagName('li')
-  console.log(tags)
 
+  filtroResponsivo()
+ 
   Array.from(tags).forEach(elemento =>{
     if(elemento.getAttribute('data-valor-limite') === '100'){
       console.log("IT IS!")
@@ -34,6 +35,23 @@ export function filtroPorValor(){
     })
 
   }
+}
 
-
+function filtroResponsivo(){
+  const filtroAbrir = document.querySelector('[data-abrir-filtros]')
+  filtroAbrir.addEventListener('click', function(){
+    let showFiltros = document.querySelector('[data-mostrar-filtro]')
+    showFiltros.classList.add('active')
+  })
+  const filtroFechar = document.querySelector('[data-fechar-filtros]')
+  filtroFechar.addEventListener('click', function(){
+    let showFiltros = document.querySelector('[data-mostrar-filtro]')
+    showFiltros.classList.remove('active')
+  })
+  document.addEventListener('click', function(e){
+      let showFiltros = document.querySelector('[data-mostrar-filtro]')
+      if(e.target !== showFiltros && !showFiltros.contains(e.target) && e.target !== filtroAbrir){
+        showFiltros.classList.remove('active')
+      }
+  })
 }

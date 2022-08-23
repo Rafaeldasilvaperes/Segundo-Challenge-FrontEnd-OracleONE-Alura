@@ -64,8 +64,15 @@
   <!-- ----------------MAIN CONTEÚDO---------------------- -->
   <main class="conteudo">
     <div class="produtos-filtros-container">
-      <aside class="filtros">
-        <h1 class="filtros__titulo" data-filtra-completo>Todos</h1>
+      <aside class="filtros" data-mostrar-filtro>
+        <header class="filtros__close" data-fechar-filtros> 
+          <a href="#">
+            &#10005;
+          </a>
+        </header>
+        <h1 class="filtros__titulo" data-filtra-completo>
+          <a href="#">&#8634; Todos</a>
+        </h1>
         <h2 class="filtro">Preços:</h2>
         <ol class="filtro__container" data-filtro-preco>
           <li class="filtro__item" data-valor-limite="100">
@@ -99,7 +106,7 @@
           </li>
         </ol>
 
-        <!--2--> <hr>
+        <hr>
 
         <h2 class="filtro">Gênero:</h2>
         <ol class="filtro__container">
@@ -215,6 +222,7 @@
           <div class="loading active" id="loading">
             <div class="loading__spinner"></div>
           </div>
+          <aside class="produtos__filtro_btn" data-abrir-filtros></aside>
           <h2 id="TodosProdutosTitulo" class="produtos__categoria">Todos os produtos</h2>
           <ul aria-labelledby="TodosProdutosTitulo" class="produtos__container produtos__container--todos_public" data-lista-de-produtos>
 
