@@ -50,6 +50,7 @@
   color: white;
   background-color: var(--btn-blue);
 }
+
 .cabecalho__search-btn{
   display: none;
 }

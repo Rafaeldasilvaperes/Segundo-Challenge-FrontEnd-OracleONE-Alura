@@ -1,4 +1,8 @@
 import { produtosService } from "../service/cliente-service.js"
+import { checaSessao } from './checa-se-esta-logado-controller.js'
+
+checaSessao()
+
 
 const formulario = document.querySelector('[data-form]')
 

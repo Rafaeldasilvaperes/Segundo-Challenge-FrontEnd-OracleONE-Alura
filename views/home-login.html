@@ -64,22 +64,22 @@
     <!--LOGIN FORM-->
     <section class="login">
       <div class="contatos__item contatos__item--login">
-        <form class="contatos__form" action="">
+        <form class="contatos__form" action="" data-login-submit>
           <fieldset>
             <legend class="contatos__item_titulo_form--login">Iniciar Sessão</legend>
             <!-- <h2 class="contatos__item_titulo_form--login"></h2> -->
             
             <div class="contatos__item_input_container">
-              <input class="input input--login" name="email" id="email" type="text" placeholder="Escreva seu email" required>
+              <input class="input input--login" name="email" id="email" type="text" placeholder="Escreva seu email" required data-login-email>
               <label class="input-label input-label--login" for="email">Escreva seu email </label>
             </div>
             
             <div class="contatos__item_input_container">
-              <input class="input input--login" name="senha" id="senha" type="password" placeholder="Escreva sua senha" required>
+              <input class="input input--login" name="senha" id="senha" type="password" placeholder="Escreva sua senha" required data-login-senha>
               <label class="input-label input-label--login" for="senha">Escreva sua senha</label>
             </div>
             
-            <input class="submit__btn submit__btn--login" type="submit" value="Entrar">
+            <input class="submit__btn submit__btn--login" type="submit" value="Entrar" >
           </fieldset>
         </form>
       </div>
@@ -142,7 +142,7 @@
     </a>
   </footer>
   <!--FIM RODAPÉ FOOTER-->
-
+  <script src="../scripts/controller/login-controller.js" type="module"></script>
   <script src="../scripts/search-btn/search-btn.js" type="text/javascript"></script>
 </body>
 </html>

@@ -1,3 +1,7 @@
+.cabecalho__container_items--deslogar:last-child a:hover{
+  background-color: rgb(213, 213, 213);
+}
+
 .produtos{
   grid-area: produtos;
   padding: 64px var(--padding-default);
@@ -126,6 +130,8 @@
 .modal__wrapper div button:active{
   background-color: orangered;
 }
+
+
 
 @media only screen and (max-width: 1200px){
   .produtos__container{
