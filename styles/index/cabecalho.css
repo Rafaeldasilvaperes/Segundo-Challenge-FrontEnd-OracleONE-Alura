@@ -85,12 +85,12 @@
   
 }
 @media only screen and (max-width: 992px){
-
+  .cabecalho__container_items:last-child a{
+    padding: 12px 20px;   
+  }
 }
-@media only screen and (max-width: 768px){
 
-}
-@media only screen and (max-width: 670px){
+@media only screen and (max-width: 770px){
   .cabecalho__container{
     display: flex;
     align-items: center;
@@ -103,9 +103,7 @@
     margin-left: 0;
   }
   
-  .cabecalho__container_items:last-child a{
-    padding: 12px 47.5px;   
-  }
+  
   .cabecalho__container_items .cabecalho__search_bar{
     display: none;
   }
