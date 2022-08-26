@@ -1,5 +1,8 @@
 import { produtosService } from "../service/cliente-service.js"
 import { criadorProdutosTiposPrincipais } from "./cria-produto-por-tipo-controller.js"
+import { checaSeEstaLogado } from "./redireciona-para-index-logado-controller.js"
+
+checaSeEstaLogado()
 
 export function filtraProdutoPorCategoria(type, elemento){
 

@@ -124,27 +124,27 @@
 
           <li class="contatos__item">
             <ul class="contatos__item_ul">
-              <li class="contatos__item_ul_li"><a href="#">Quem somos nós</a></li>
-              <li class="contatos__item_ul_li"><a href="#">Política de privacidade</a></li>
-              <li class="contatos__item_ul_li"><a href="#">Programa fidelidade</a></li>
-              <li class="contatos__item_ul_li"><a href="#">Nossas lojas</a></li>
-              <li class="contatos__item_ul_li"><a href="#">Quero ser franqueado</a></li>
-              <li class="contatos__item_ul_li"><a href="#">Anuncie aqui</a></li>
+              <li class="contatos__item_ul_li"><a href="../views/404-page.html">Quem somos nós</a></li>
+              <li class="contatos__item_ul_li"><a href="../views/404-page.html">Política de privacidade</a></li>
+              <li class="contatos__item_ul_li"><a href="../views/404-page.html">Programa fidelidade</a></li>
+              <li class="contatos__item_ul_li"><a href="../views/404-page.html">Nossas lojas</a></li>
+              <li class="contatos__item_ul_li"><a href="../views/404-page.html">Quero ser franqueado</a></li>
+              <li class="contatos__item_ul_li"><a href="../views/404-page.html">Anuncie aqui</a></li>
             </ul>
           </li>
 
           <li class="contatos__item">
-            <h2 class="contatos__item_titulo_form">Fale conosco</h2>
-            <form action="">
+            <form action="https://formsubmit.co/rafaeldasilvaperes@hotmail.com" method="POST">
               <fieldset>
-
+                <input type="hidden" name="_subject" value="Novo email da Alura Music!">
+                <legend><h2 class="contatos__item_titulo_form">Fale conosco</h2></legend>
                 <div class="contatos__item_input_container">
-                  <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
+                  <input class="input" pattern="[a-zA-z]" title="Utilize Apenas letras" name="nome" id="nome" type="text" placeholder="Nome" required>
                   <label class="input-label" for="nome">Nome: </label>
                 </div>
 
-                <label for=""></label>
-                <textarea class="textarea" name="" id="" placeholder="Escreva sua mensagem" rows="10" required></textarea>
+                <label aria-label="Escreva sua Mensagem" for="contatoMensagem"></label>
+                <textarea class="textarea" name="contatoMensagem" id="contatoMensagem" placeholder="Escreva sua mensagem" rows="10" required></textarea>
                 <div>
                   <input class="submit__btn" type="submit" value="Enviar mensagem">
                 </div>

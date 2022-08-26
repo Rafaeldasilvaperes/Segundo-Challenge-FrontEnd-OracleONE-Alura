@@ -8,11 +8,11 @@ campoSubmit.addEventListener('submit', function(evento){
   let loginEmail = "admin@hotmail.com"
   let loginSenha = "123123"
 
-  if(loginEmail === campoEmail.value && loginSenha === campoSenha.value){
+  if(loginEmail.toLowerCase() === campoEmail.value.toLowerCase() && loginSenha === campoSenha.value){
     sessionStorage.setItem('Admin', 'Logado')
     location.href = "produtos-home.html"
   }else{
-    campoSubmit.reset();
+    campoEmail.value = 'Tente: "admin@hotmail.com" e Senha: "123123"'
   }
   
 })

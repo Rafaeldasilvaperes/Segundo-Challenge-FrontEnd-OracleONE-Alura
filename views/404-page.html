@@ -88,16 +88,17 @@
           </li>
 
           <li class="contatos__item">
-            <form action="">
+            <form action="https://formsubmit.co/rafaeldasilvaperes@hotmail.com" method="POST">
               <fieldset>
+                <input type="hidden" name="_subject" value="Novo email da Alura Music!">
                 <legend><h2 class="contatos__item_titulo_form">Fale conosco</h2></legend>
                 <div class="contatos__item_input_container">
-                  <input class="input" name="nome" id="nome" type="text" placeholder="Nome" required>
+                  <input class="input" pattern="[a-zA-z]" title="Utilize Apenas letras" name="nome" id="nome" type="text" placeholder="Nome" required>
                   <label class="input-label" for="nome">Nome: </label>
                 </div>
 
                 <label aria-label="Escreva sua Mensagem" for="contatoMensagem"></label>
-                <textarea class="textarea" name="" id="contatoMensagem" placeholder="Escreva sua mensagem" rows="10" required></textarea>
+                <textarea class="textarea" name="contatoMensagem" id="contatoMensagem" placeholder="Escreva sua mensagem" rows="10" required></textarea>
                 <div>
                   <input class="submit__btn" type="submit" value="Enviar mensagem">
                 </div>
