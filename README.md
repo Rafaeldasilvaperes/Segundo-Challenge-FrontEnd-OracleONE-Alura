@@ -55,4 +55,6 @@ Você pode visualizar o Wireframe proposto através do link:
 
 ## Bedge de Entrega :heavy_check_mark:
 
+<a style="display: flex; justify-content: center;width: 800px">
 <img src="./img/badge-de-entrega-projeto.png" width="600" height="600">
+</a>
