@@ -1,9 +1,12 @@
 # Segundo Challenge de Front-end Oracle ONE + Alura Challenges :notes:
 [English Version](#englishVersion)
 
-[![Alura Geek](img/Alura-Music-Capa.png)](https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/index.html)
+<a href="https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/index.html" title="Alura Music ♫" target="_blank">
+  <img src="img/Alura-Music-Capa.png">
+</a>
 
 > Teste a aplicação clicando na imagem
+
 
 O novo projeto proposto pela Alura Challenges desta vez consistiu em um site de eCommerce, originalmente chamado Alura Geek, mas modificado por mim para o Alura Music. 
 
@@ -30,4 +33,26 @@ Caso queira testar as funcionalidades de adicionar, editar, excluir da aplicaç�
 
 O campo de "Breve descrição da imagem" consiste em um item para acessibilidade que será usado no atributo "alt" da imagem e é obrigatório.
 
->Todas as alterações serão reiniciadas assim que os Dynos do Heroku reiniciarem, não se apegue a elas;
+> Todas as alterações serão reiniciadas assim que os Dynos do Heroku reiniciarem, não se apegue a elas;
+
+## Tecnologias :gear:
+
+
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+
+Foi disponibilizado um <strong>Wireframe</strong> no <strong>Figma</strong> pelo pessoal da Alura Challenges para que fosse usado como base. Tentei manter todas as proporções de acordo com o Design do Projeto. Tomei a liberdade de fazer algumas mudanças chaves na aplicação para obter a expressão de um tema relacionado a música, mas nenhuma mudança na identidade ou na estrutura do design do projeto foram feitas. 
+
+Devido a falta de uma página de exibição de <strong>Todos os Produtos Pública</strong> no Design disponibilizado, construí uma nova página tentando manter a mesma identidade visual do resto da aplicação.
+
+Você pode visualizar o Wireframe proposto através do link:
+
+<a href="https://www.figma.com/file/itJpWbvHxSUcUeMPy1lmof/AluraGeek?node-id=0%3A1" title="Alura Geek Wireframe" target="_blank">
+<img src="https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white">
+</a>
+
+
+## Bedge de Entrega :heavy_check_mark:
+
+<img src="./img/badge-de-entrega-projeto.png" width="600" height="600">
