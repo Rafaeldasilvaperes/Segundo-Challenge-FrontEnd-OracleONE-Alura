@@ -20,7 +20,13 @@ A <strong>persistência de dados</strong> na aplicação não foi um requisito, 
 
 A aplicação é responsiva para <strong>mobile</strong>, <strong>tablet</strong> e <strong>desktop</strong>
 
-Você pode testar a aplicação acessando este link: <a href="https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/" target="_blank"><strong>Alura Music ♫</strong></a>
+Você pode testar a aplicação acessando este link: 
+- <a href="https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/" target="_blank"><strong>Alura Music ♫ (GitHub Pages)</strong></a>
+- <a href="https://segundo-challenge-frontend-one.herokuapp.com/index.html" target="_blank"><strong>Alura Music ♫ (Heroku)</strong></a>
+
+Você pode acessar o meu JSON server "Fake Database" através dos links:
+- <a href="https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/" target="_blank"><strong>Alura Music DB ♫ (Repositório GitHub)</strong></a>
+- <a href="https://fake-server-app-alura-music.herokuapp.com/products" target="_blank"><strong>Alura Music DB ♫ (Heroku)</strong></a>
 
 ## Alura Music ♫
 
