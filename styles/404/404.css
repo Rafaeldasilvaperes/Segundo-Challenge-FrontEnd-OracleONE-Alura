@@ -2,4 +2,10 @@
   display: flex;
   justify-content: center;
   background-color: #EDEDEF;
+ 
+}
+
+.fourOfour__message img{
+  width: 100%;
+  max-width: fit-content;
 }
