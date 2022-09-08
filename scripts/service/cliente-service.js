@@ -2,8 +2,8 @@
 const ENDPOINTS = {
   produtos: "https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend/backend/db.json",
   produtosLocal: "http://localhost:3000/products/",
-  // Heroku: "https://fake-server-app-alura-music.herokuapp.com/products/"
-  Heroku: "https://servico-para-alura-music.herokuapp.com/aluramusic/index/"
+  Heroku: "https://fake-server-app-alura-music.herokuapp.com/products/"
+  // Heroku: "https://servico-para-alura-music.herokuapp.com/aluramusic/index/"
 }
 
 function listaProdutos(){
