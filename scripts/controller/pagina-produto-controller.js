@@ -9,20 +9,20 @@ export function criaPaginaProduto(){
 
   produtosService.detalhaProduto(id)
   .then(produto => {
-    document.title = produto.name
+    document.title = produto.productName
     const dataTipos = document.querySelector(`[data-produtos]`)
-    dataTipos.dataset.produtos = `${produto.type}`
+    dataTipos.dataset.produtos = `${produto.productType}`
    
-    produtosRelacionados(produto.type, dataTipos)
+    produtosRelacionados(produto.productType, dataTipos)
     
     const produtoTemplate = 
     `
             <div class="produto__container">
-              <img src="${produto.image}" alt="${produto.alt}" class="produto__img">
+              <img src="${produto.productImage}" alt="${produto.productAlt}" class="produto__img">
               <div class="produto__descricao">
-                <h2 class="produto__descricao__titulo">${produto.name}</h2>
-                <h3 class="produto__descricao__subtitulo">R$ ${produto.price}</h3>
-                <h4 class="produto__descricao__texto">${produto.description}</h4>
+                <h2 class="produto__descricao__titulo">${produto.productName}</h2>
+                <h3 class="produto__descricao__subtitulo">R$ ${produto.productPrice}</h3>
+                <h4 class="produto__descricao__texto">${produto.productDesc}</h4>
               </div>
           </div> 
   
@@ -35,8 +35,8 @@ function produtosRelacionados(elementoType, ul){
   produtosService.listaProdutos()
   .then(data => {
       data.forEach(elemento => {
-        if(elemento.type == elementoType){
-          return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento.id, ".."))
+        if(elemento.productType == elementoType){
+          return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento._id, ".."))
         }
     });
   })

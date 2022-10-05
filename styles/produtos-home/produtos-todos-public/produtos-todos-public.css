@@ -134,7 +134,7 @@
 }
 
 .produtos__article{
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 5px;
 }
 .produtos__article:hover, .produtos__article a:focus{

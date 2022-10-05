@@ -6,11 +6,11 @@ export function criadorDeProdutoPaginaFiltros(objeto){
   const produtoTemplate = 
   `
   <article class="produtos__article">
-    <a href="./produtos-produto.html?id=${objeto.id}" class="produtos__item" data-produto>
-      <img src="${objeto.image}" alt="${objeto.alt}" class="produtos__item_imagem">
-      <h3 class="produtos__item_titulo produtos__item_titulo--all" data-name>${objeto.name}</h3>
-      <h4 class="produtos__item_preco" data-price="${objeto.price}">R$ ${objeto.price}</h4>
-      <div href="./produtos-produto.html?id=${objeto.id}" class="produtos__item_link_ver_mais">Ver produtos</div>
+    <a href="./produtos-produto.html?id=${objeto._id}" class="produtos__item" data-produto>
+      <img src="${objeto.productImage}" alt="${objeto.productAlt}" class="produtos__item_imagem">
+      <h3 class="produtos__item_titulo produtos__item_titulo--all" data-name>${objeto.productName}</h3>
+      <h4 class="produtos__item_preco" data-price="${objeto.productPrice}">R$ ${objeto.productPrice}</h4>
+      <div href="./produtos-produto.html?id=${objeto._id}" class="produtos__item_link_ver_mais">Ver produtos</div>
     </a>
   </article>
 `

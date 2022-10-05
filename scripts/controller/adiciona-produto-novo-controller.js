@@ -30,7 +30,8 @@ formulario.addEventListener('submit', (evento)=>{
 
   produtosService.adicionaProduto(uploaded_image, alt, tipo, titulo, preco, descricao)
   .then(() => {
-    window.location.href = '../views/produtos-home.html';
+    
+    // window.location.href = '../views/produtos-home.html';
   })
 })
 

@@ -21,14 +21,14 @@ const descricao = document.querySelector('[data-textarea-descricao]')
 
 produtosService.detalhaProduto(id)
   .then(produto => {
-    document.title = `Editar | ${produto.name}`
-    img.style.backgroundImage = `url(${produto.image})`
-    uploaded_image = `${produto.image}`
-    alt.value = produto.alt
-    tipo.value = produto.type
-    titulo.value = produto.name
-    preco.value = produto.price
-    descricao.value = produto.description
+    document.title = `Editar | ${produto.productName}`
+    img.style.backgroundImage = `url(${produto.productImage})`
+    uploaded_image = `${produto.productImage}`
+    alt.value = produto.productAlt
+    tipo.value = produto.productType
+    titulo.value = produto.productName
+    preco.value = produto.productPrice
+    descricao.value = produto.productDesc
     
   })
 

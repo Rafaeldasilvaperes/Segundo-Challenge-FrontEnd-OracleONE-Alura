@@ -9,8 +9,8 @@ export function filtraProdutoPorCategoria(type, elemento){
   const dataTipos = document.querySelectorAll(`[data-produtos]`)
   
   dataTipos.forEach(ul =>  {
-    if(ul.getAttribute("data-produtos") == type){
-      return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento.id, "."))
+    if(ul.getAttribute("data-produtos") == type ){
+      return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento._id, "."))
     }
   }
   )
@@ -22,8 +22,9 @@ export function appendProdutosPorTipo(){
   
   produtosService.listaProdutos()
   .then(data => {
+    console.log(data)
       data.forEach(elemento => {
-        filtraProdutoPorCategoria(elemento.type, elemento)
+        filtraProdutoPorCategoria(elemento.productType, elemento)
     });
   })
 }

@@ -14,14 +14,14 @@ export function criadorDeProduto(objeto){
   const produtoTemplate = 
   `
         <article class="produtos__article">
-            <img src="${objeto.image}" alt="${objeto.alt}" class="produtos__item_imagem">
+            <img src="${objeto.productImage}" alt="${objeto.productAlt}" class="produtos__item_imagem">
             <div class="produtos__item_btns_container">
-              <button class="produtos__item_edit_btn"><img src="../img/delete-icon.svg" alt="Deletar Produto" data-btn-deletar="${objeto.id}"></button>
-              <a href="./produto-editar.html?id=${objeto.id}" class="produtos__item_edit_btn" data-btn-editar="${objeto.id}"><img src="../img/edit-icon.svg" alt="Editar Produto"></a>
+              <button class="produtos__item_edit_btn"><img src="../img/delete-icon.svg" alt="Deletar Produto" data-btn-deletar="${objeto._id}"></button>
+              <a href="./produto-editar.html?id=${objeto._id}" class="produtos__item_edit_btn" data-btn-editar="${objeto._id}"><img src="../img/edit-icon.svg" alt="Editar Produto"></a>
             </div>
-            <h2 class="produtos__item_titulo">${objeto.name}</h2>
-            <h3 class="produtos__item_preco">R$ ${objeto.price}</h3>
-            <a href="#" class="produtos__item_link_ver_mais">#${objeto.id}</a>
+            <h2 class="produtos__item_titulo">${objeto.productName}</h2>
+            <h3 class="produtos__item_preco">R$ ${objeto.productPrice}</h3>
+            <a href="#" class="produtos__item_link_ver_mais">#${objeto._id}</a>
         </article>
 
   `

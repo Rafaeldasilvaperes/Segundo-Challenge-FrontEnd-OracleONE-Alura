@@ -2,63 +2,64 @@
 const ENDPOINTS = {
   produtos: "https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend/backend/db.json",
   produtosLocal: "http://localhost:3000/products/",
-  Heroku: "https://fake-server-app-alura-music.herokuapp.com/products/"
+  Heroku: "https://nodejs-service-for-aluramusic.herokuapp.com/products/"
+  // Heroku: "https://fake-server-app-alura-music.herokuapp.com/products/"
   // Heroku: "https://servico-para-alura-music.herokuapp.com/aluramusic/index/"
 }
 
-function listaProdutos(){
-  return fetch(ENDPOINTS.Heroku)
-  .then(resposta => {
-    return resposta.json()
-  })
+const APIKEY = "?api_key=070e92ae-990b-48c1-b220-a7f542d6024e"
+
+// GET ALL
+async function listaProdutos(){
+  const resposta = await fetch(`${ENDPOINTS.Heroku}${APIKEY}`)
+  return await resposta.json()
 }
 
-function detalhaProduto(id){
-  return fetch(`${ENDPOINTS.Heroku}${id}`)
-  .then(resposta => {
-    return resposta.json()
-  })
+// GET:id
+async function detalhaProduto(id){
+  const resposta = await fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`)
+  return await resposta.json()
 }
 
-function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
-  return fetch(ENDPOINTS.Heroku, {
+// POST
+async function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
+  const resposta = await fetch(`${ENDPOINTS.Heroku}${APIKEY}`, {
     method: 'POST',
-    headers: { 'Content-Type' : 'application/json' },
-    body: JSON.stringify({ 
-      image: img_URL,
-      alt: alt,
-      type: tipo,
-      name: titulo,
-      price: preco,
-      description: descricao
-     })
-  }).then(resposta => {
-    return resposta.body
-  })
-}
-
-function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
-  return fetch(`${ENDPOINTS.Heroku}${id}`, {
-    method: 'PUT',
-    headers: {
-      'Content-type' : 'application/json'
-    },
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      image: img_URL,
-      alt: alt,
-      type: tipo,
-      name: titulo,
-      price: preco,
-      description: descricao
+      productName: titulo,
+      productPrice: preco,
+      productDesc: descricao,
+      productAlt: alt,
+      productType: tipo,
+      productImage: img_URL
     })
   })
-  .then(resposta => {
-    return resposta.json()
-  })
+  return resposta.body
 }
 
+// PUT:id
+async function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
+  const resposta = await fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`, {
+    method: 'PUT',
+    headers: {
+      'Content-type': 'application/json'
+    },
+    body: JSON.stringify({
+      productImage: img_URL,
+      productAlt: alt,
+      productType: tipo,
+      productName: titulo,
+      productPrice: preco,
+      productDesc: descricao
+    })
+  })
+  return await resposta.json()
+}
+
+// DELETE:id
 function removeProduto(id){
-  return fetch(`${ENDPOINTS.Heroku}${id}`, {
+  return fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`, {
     method: 'DELETE'
   })
 }
