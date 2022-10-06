@@ -25,13 +25,13 @@ formulario.addEventListener('submit', (evento)=>{
   const alt = evento.target.querySelector('[data-alt]').value
   const tipo = evento.target.querySelector('[data-tipo]').value
   const titulo = evento.target.querySelector('[data-titulo]').value
-  const preco = precoMascara.value
+  const preco = SimpleMaskMoney.formatToNumber(precoMascara.value);
   const descricao = evento.target.querySelector('[data-textarea-descricao]').value
-
+  console.log(preco)
   produtosService.adicionaProduto(uploaded_image, alt, tipo, titulo, preco, descricao)
   .then(() => {
     
-    // window.location.href = '../views/produtos-home.html';
+    window.location.href = '../views/produtos-home.html';
   })
 })
 

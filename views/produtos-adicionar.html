@@ -65,7 +65,7 @@
     <!--LOGIN FORM-->
     <section class="adicionarProduto">
       <div class="contatos__item contatos__item--login">
-        <form class="contatos__form" action="" data-form>
+        <form class="contatos__form" action="" method="post" data-form>
           <fieldset>
             <legend class="contatos__item_titulo_form | contatos__item_titulo_form--login | contatos__item_titulo_form--adicionar">Adicionar Novo Produto</legend>
 
@@ -103,7 +103,7 @@
 
             <!--PREÇO PRODUTO INPUT-->
             <div class="contatos__item_input_container">
-              <input class="input input--adicionar" name="preco" id="preco" type="text" placeholder="Preço do produto" required data-preco>
+              <input class="input input--adicionar" name="preco" id="preco" inputmode="numeric" value="0,00" placeholder="Preço do produto" required data-preco>
               <label class="input-label" for="preco">Preço do produto</label>
             </div>
 

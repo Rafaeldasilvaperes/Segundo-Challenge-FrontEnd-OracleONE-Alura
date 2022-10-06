@@ -36,7 +36,7 @@ export function appendTodosProdutos(){
         let botaoDeletarClicado = evento.target
         const modalContainer = document.querySelector('[data-modal]')
         const modal = document.querySelector('[data-modal-wrapper]')
-        let buttonID = botaoDeletarClicado.getAttribute('data-btn-deletar')
+        const buttonID = botaoDeletarClicado.getAttribute('data-btn-deletar')
         modalContainer.addEventListener('click', (e)=>{
           e.stopImmediatePropagation()
           if(e.target == modalContainer){
@@ -45,19 +45,20 @@ export function appendTodosProdutos(){
         })
         
         if(buttonID){
-          console.log(buttonID)
+         
+          console.log(buttonID, "DENTRO IF")
           modalContainer.classList.add('active')
           const buttonSIM = modal.querySelector('[data-btn-sim]')
           const buttonNAO = modal.querySelector('[data-btn-nao]')
           
           modal.addEventListener('click', (e)=>{
-            e.stopImmediatePropagation()
+  
             let escolha = e.target
             if(escolha && escolha == buttonSIM){
-              console.log("APAGOU!")
-              deletarProduto(buttonID, evento)
+              console.log("APAGOU!", buttonID)
               modalContainer.classList.remove('active')
-             
+              deletarProduto(buttonID, evento)
+              
             }else if(escolha && escolha == buttonNAO){
               console.log("NOPE")
               modalContainer.classList.remove('active')
@@ -76,12 +77,14 @@ export function appendTodosProdutos(){
     })
   }
 
-  function deletarProduto(id, eventoProdutoClicado){
-    const liDoProduto = eventoProdutoClicado.target.closest('li')
-    produtosService.removeProduto(id)
-    .then(()=>{
-      liDoProduto.remove()
-    })
+
+// deleta produto
+function deletarProduto(id, eventoProdutoClicado){
+  const liDoProduto = eventoProdutoClicado.target.closest('li')
+  produtosService.removeProduto(id)
+  .then(()=>{
+    liDoProduto.remove()
+  })
 }
 
 appendTodosProdutos()

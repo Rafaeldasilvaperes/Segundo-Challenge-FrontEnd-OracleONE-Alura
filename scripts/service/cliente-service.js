@@ -58,10 +58,12 @@ async function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao)
 }
 
 // DELETE:id
-function removeProduto(id){
-  return fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`, {
+async function removeProduto(id){
+  const resposta = await fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`, {
     method: 'DELETE'
   })
+  return resposta
+  
 }
 
 export const produtosService = {
