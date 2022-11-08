@@ -10,7 +10,6 @@ const url = document.querySelector('[data-url]')
 uploaded_image = url.addEventListener('change', pegaStringDaImagem)
 
 // campos form
-// const img = document.querySelector('[data-url]')
 const img = document.querySelector('[data-span-imagem]')
 const alt = document.querySelector('[data-alt]')
 const tipo = document.querySelector('[data-tipo]')
@@ -21,6 +20,7 @@ const descricao = document.querySelector('[data-textarea-descricao]')
 
 produtosService.detalhaProduto(id)
   .then(produto => {
+    // automatically filling inputs with products informations to be edited
     document.title = `Editar | ${produto.productName}`
     img.style.backgroundImage = `url(${produto.productImage})`
     uploaded_image = `${produto.productImage}`
@@ -42,6 +42,7 @@ form.addEventListener('submit', (evento)=>{
   })
 })
 
+// this function creates a base64 image
 function pegaStringDaImagem(){
   var previewImagem = document.querySelector('[data-span-imagem]')
   const reader = new FileReader();

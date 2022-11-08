@@ -22,7 +22,7 @@ async function detalhaProduto(id){
 }
 
 // POST
-async function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
+async function adicionaProduto(img_b64, alt, tipo, titulo, preco, descricao){
   const resposta = await fetch(`${ENDPOINTS.Heroku}${APIKEY}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -32,21 +32,21 @@ async function adicionaProduto(img_URL, alt, tipo, titulo, preco, descricao){
       productDesc: descricao,
       productAlt: alt,
       productType: tipo,
-      productImage: img_URL
+      productImage: img_b64
     })
   })
   return resposta.body
 }
 
-// PUT:id
-async function atualizaProduto(id, img_URL, alt, tipo, titulo, preco, descricao){
+// PATCH:id
+async function atualizaProduto(id, img_b64, alt, tipo, titulo, preco, descricao){
   const resposta = await fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`, {
-    method: 'PUT',
+    method: 'PATCH',
     headers: {
       'Content-type': 'application/json'
     },
     body: JSON.stringify({
-      productImage: img_URL,
+      productImage: img_b64,
       productAlt: alt,
       productType: tipo,
       productName: titulo,
