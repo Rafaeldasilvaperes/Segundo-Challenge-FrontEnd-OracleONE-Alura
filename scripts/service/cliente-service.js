@@ -2,9 +2,8 @@
 const ENDPOINTS = {
   produtos: "https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend/backend/db.json",
   produtosLocal: "http://localhost:3000/products/",
-  Heroku: "https://nodejs-service-for-aluramusic.herokuapp.com/products/"
-  // Heroku: "https://fake-server-app-alura-music.herokuapp.com/products/"
-  // Heroku: "https://servico-para-alura-music.herokuapp.com/aluramusic/index/"
+  Heroku: "https://nodejs-service-for-aluramusic.herokuapp.com/v1/products/"
+  
 }
 
 const APIKEY = "?api_key=070e92ae-990b-48c1-b220-a7f542d6024e"
