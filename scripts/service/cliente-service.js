@@ -2,27 +2,31 @@
 const ENDPOINTS = {
   produtos: "https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend/backend/db.json",
   produtosLocal: "http://localhost:3000/products/",
-  Heroku: "https://nodejs-service-for-aluramusic.herokuapp.com/v1/products/"
+  Heroku: "https://nodejs-service-for-aluramusic.herokuapp.com/v1/products/",
+  Cyclic: "https://concerned-foal-outerwear.cyclic.app/v1/products/"
   
 }
+
+// change only here
+const ENDPOINT = ENDPOINTS.Cyclic;
 
 const APIKEY = "?api_key=070e92ae-990b-48c1-b220-a7f542d6024e"
 
 // GET ALL
 async function listaProdutos(){
-  const resposta = await fetch(`${ENDPOINTS.Heroku}${APIKEY}`)
+  const resposta = await fetch(`${ENDPOINT}${APIKEY}`)
   return await resposta.json()
 }
 
 // GET:id
 async function detalhaProduto(id){
-  const resposta = await fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`)
+  const resposta = await fetch(`${ENDPOINT}${id}${APIKEY}`)
   return await resposta.json()
 }
 
 // POST
 async function adicionaProduto(img_b64, alt, tipo, titulo, preco, descricao){
-  const resposta = await fetch(`${ENDPOINTS.Heroku}${APIKEY}`, {
+  const resposta = await fetch(`${ENDPOINT}${APIKEY}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
@@ -39,7 +43,7 @@ async function adicionaProduto(img_b64, alt, tipo, titulo, preco, descricao){
 
 // PATCH:id
 async function atualizaProduto(id, img_b64, alt, tipo, titulo, preco, descricao){
-  const resposta = await fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`, {
+  const resposta = await fetch(`${ENDPOINT}${id}${APIKEY}`, {
     method: 'PATCH',
     headers: {
       'Content-type': 'application/json'
@@ -58,7 +62,7 @@ async function atualizaProduto(id, img_b64, alt, tipo, titulo, preco, descricao)
 
 // DELETE:id
 async function removeProduto(id){
-  const resposta = await fetch(`${ENDPOINTS.Heroku}${id}${APIKEY}`, {
+  const resposta = await fetch(`${ENDPOINT}${id}${APIKEY}`, {
     method: 'DELETE'
   })
   return resposta
