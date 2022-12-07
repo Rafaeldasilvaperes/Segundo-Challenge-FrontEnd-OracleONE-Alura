@@ -1,0 +1,24 @@
+.alert {
+  position: absolute;
+  top: 18%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 12px 16px;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  font-size: 16px;
+  font-size: calc(0.1vw + 0.2vh + 2vmin);
+  display: none;
+}
+
+.alert.alert-warning {
+  background-color: rgba(248, 215, 218, 1);
+  border-color: rgba(220, 53, 69, 1);
+  color: rgba(114, 28, 36,1);
+}
+
+.alert.alert-warning.active{
+  display: block;
+}
