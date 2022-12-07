@@ -14,32 +14,43 @@ Nesse projeto tivemos a divisão em 2 Sprints:
 - a <strong>1° sprint</strong> focada na construção da parte visual da aplicação em HTML5 e CSS3;
 - a <strong>2° sprint</strong> com a implementação das funcionalidades de ler, adicionar, editar e excluir produtos (CRUD) e a geração do nosso conteúdo de forma dinâmica com JavaScript.
 
-O uso de <strong>Framework</strong> não foi requisitado para o auxílio da construção da aplicação.
+> O uso de <strong>Framework</strong> não foi requisitado para o auxílio da construção da aplicação.
 
-A <strong>persistência de dados</strong> na aplicação não foi um requisito, porém para poder simular de forma um pouco mais dinâmica as funcionalidades da aplicação, eu fiz uso do pacote npm <code>JSON server</code>, populei ele localmente com minha aplicação, então subi o banco de dados 'fake' no github e usei um pipeline para conecta-lo ao Heroku como uma aplicação. Com isso consegui simular as funcionalidades de adição, edição e exclusão dos produtos na aplicação sem que essas mudaças persistam devido ao "restart" dos dynos do Heroku!
+### Aplicação
+
+Você pode testar a aplicação acessando este link: 
+- <a href="https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/" target="_blank"><strong>Alura Music ♫</strong></a> (GitHub Pages)
 
 A aplicação é responsiva para <strong>mobile</strong>, <strong>tablet</strong> e <strong>desktop</strong>
 
-Você pode testar a aplicação acessando este link: 
-- <a href="https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/" target="_blank"><strong>Alura Music ♫ (GitHub Pages)</strong></a>
-- <a href="https://segundo-challenge-frontend-one.herokuapp.com/index.html" target="_blank"><strong>Alura Music ♫ (Heroku)</strong></a>
 
-Você pode acessar o meu JSON server "Fake Database" através dos links:
-- <a href="https://github.com/Rafaeldasilvaperes/Segundo-Challenge-FrontEnd-OracleONE-Alura-backend" target="_blank"><strong>Alura Music DB ♫ (Repositório GitHub)</strong></a>
-- <a href="https://fake-server-app-alura-music.herokuapp.com/products" target="_blank"><strong>Alura Music DB ♫ (Heroku)</strong></a>
+### Persistência de dados
+
+A persistência de dados na aplicação está sendo feita por uma API desenvolvida em NodeJS por mim. Os dados estão sendo salvos em um banco de dados NoSQL o MongoDB na núvem com o uso do [MongoDB Atlas](https://www.mongodb.com/pt-br/cloud/atlas/efficiency). Você pode visitar o repositório da API que consumo por esse front-end através deste link:
+
+- <a href="https://github.com/Rafaeldasilvaperes/Alura-Music-API-in-nodejsExpress" target="_blank"><strong>Alura Music API in NodeJsExpress</strong></a> (repositório)
+
 
 ## Alura Music ♫
 
-Caso queira testar as funcionalidades de adicionar, editar, excluir da aplicação, será necessário entrar com um e-mail e senha após chegar na página de login. Insira os seguintes dados para logar:
+#### Novo Usuário
 
-- E-mail:
-  - admin@hotmail.com
-- Senha:
-  - 123123
+Caso queira testar as funcionalidades de adicionar, editar, excluir da aplicação, será necessário criar um novo usuário. Basta acesar o botão "Cadastrar" e entrar com um novo e-mail ainda não cadastrado, senha e a confirmação da senha. 
 
-O campo de "Breve descrição da imagem" consiste em um item para acessibilidade que será usado no atributo "alt" da imagem e é obrigatório.
+A autorização dos usuários dentro da aplicação não possuí estado, você receberá um token JWT que será usado para gerir a autorização durante o uso da aplicação. Esse token será enviado a cada requisição ao servidor. 
 
-> Todas as alterações serão reiniciadas assim que os Dynos do Heroku reiniciarem, não se apegue a elas;
+### POST - Criar novo produto
+
+Os produtos possuem alguns atributos necessários:
+- Imagem: todas imagens serão convertidas em uma string base64 antes de serem enviadas ao servidor;
+- Nome: alfanumérico e com limite de 100 caracteres;
+- Categoria: são três e ajudam a gerir a exibição dos produtos dentro da aplicação:
+  - Albums
+  - Camisetas
+  - Ilustrações
+- Preço: foi usado a mascara Simple Mask Money para padronizar as entradas no campo;
+- Descrição da Imagem: consiste em um item para acessibilidade que será usado no atributo "alt" da imagem e é obrigatório;
+- Descrição: adicione aqui a descrição do seu produto com atributos e funcionalidades que descrevem todos possíveis atributos de interesse ao público.
 
 ## Tecnologias :gear:
 
