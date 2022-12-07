@@ -23,7 +23,7 @@
   font-size: var(--fs-content-cards-preco-VerProduto700);
   line-height: var(--lh-content-cards-preco-VerProduto700);
   font-weight: bold;
-
+  
   display: flex;
   align-items: center;
 }
@@ -35,7 +35,7 @@
   grid-column: span 2;
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(174px, 214px));
   
 }
 .produtos__container .produtos__container_lista:nth-child(n+7){
@@ -60,6 +60,7 @@
 .produtos__item, .produtos__item_link_ver_mais{
   text-decoration: none;
   color: var(--color-default);
+  
 }
 .produtos__item_imagem{
   width: 100%;
@@ -85,6 +86,11 @@
   font-size: var(--fs-content-cards-preco-VerProduto700);
   line-height: var(--lh-content-cards-preco-VerProduto700);
   font-weight: bold;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .produtos__item_link_ver_mais:hover, 
 .produtos__vertudo:hover, 
@@ -142,26 +148,35 @@
   }
 }
 
-@media only screen and (max-width: 1200px){
+@media only screen and (max-width: 1530px){
   .produtos__container{
-    grid-template-columns: repeat(5, 1fr);
+    /* grid-template-columns: repeat(5, 1fr); */
   }
-  .produtos__container .produtos__container_lista:nth-child(n+6){
-    display: none;
+}
+
+@media only screen and (max-width: 1265px){
+  .produtos__container{
+    /* grid-template-columns: repeat(4, 1fr); */
+  }
+ 
+}
+@media only screen and (max-width: 1155px){
+  .produtos__container{
+    /* grid-template-columns: repeat(4, 1fr); */
   }
 }
 
 @media only screen and (max-width: 800px){
   .produtos__container{
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
   }
-  .produtos__container .produtos__container_lista:nth-child(n+5){
+  /* .produtos__container .produtos__container_lista:nth-child(n+5){
     display: none;
-  }
+  } */
 }
 @media only screen and (max-width: 680px){
   .produtos__container{
-    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-columns: repeat(2, 1fr); */
   }
 }
 @media only screen and (max-width: 360px){
@@ -169,7 +184,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
   .produtos__container .produtos__container_lista{
-    min-width: 174px;
+    /* min-width: 174px; */
     
   }
 }

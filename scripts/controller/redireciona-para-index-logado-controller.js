@@ -1,5 +1,5 @@
 export function checaSeEstaLogado(){
-  const itemSessao = sessionStorage.getItem('Admin')
+  const itemSessao = sessionStorage.getItem('JWT')
   
   document.addEventListener('DOMContentLoaded', function(){
     if(itemSessao && window.location.href.indexOf('index-logado.html') == -1){

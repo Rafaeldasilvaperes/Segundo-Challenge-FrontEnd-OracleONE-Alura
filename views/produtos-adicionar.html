@@ -52,7 +52,7 @@
             <button type="button" title="search" class="cabecalho__search_bar_button"></button>
           </form>
         </li>
-        <li class="cabecalho__container_items">
+        <li class="cabecalho__container_items_logado">
           <a aria-label="Botão Menu administrador" href="produtos-home.html" class="cabecalho__btn_login cabecalho__btn_login--admin">Menu administrador</a>
         </li>
       </ul>
@@ -72,17 +72,18 @@
             <!--IMAGEM INPUT + DIV PREVIA-->
             <div class="contatos__item_input_container | contatos__item_input_container--imagem">
               <div data-span-imagem></div>
-              <label class="input-label input-label--imagem" for="imagem">Procurar
+              <label class="input-label input-label--imagem" for="imagem">Procurar Imagem
                   <input accept="image/*" class="input input--adicionar" name="imagem" id="imagem" type="file" placeholder="URL da imagem" required data-url>
               </label>
             </div>
 
-            <!--ALT DA IMAGEM INPUT ♫-->
+            <!--NOME PRODUTO INPUT -->
             <div class="contatos__item_input_container">
-              <input class="input input--adicionar" pattern="^[a-zA-Z\u00C0-\u00FF -,?.!]*$" name="alt" id="alt" type="text" placeholder="Descrição da imagem" required maxlength="150" data-alt>
-              <label class="input-label" for="alt">Breve descrição da imagem</label>
+              <input class="input input--adicionar" maxlength="100
+              " name="produto" id="produto" type="text" placeholder="Nome do produto" required data-titulo>
+              <label class="input-label" for="produto">Nome do produto</label>
             </div>
-            
+
             <!--CATEGORIA PRODUTO INPUT ♫-->
             <div class="contatos__item_input_container">
               <!-- <input class="input input--adicionar" name="categoria" id="categoria" type="text" placeholder="Categoria" required data-tipo> -->
@@ -93,18 +94,17 @@
               </select>
               <label class="input-label" for="categoria">Categoria</label>
             </div>
-            
-            <!--NOME PRODUTO INPUT -->
-            <div class="contatos__item_input_container">
-              <input class="input input--adicionar" maxlength="100
-              " name="produto" id="produto" type="text" placeholder="Nome do produto" required data-titulo>
-              <label class="input-label" for="produto">Nome do produto</label>
-            </div>
-
+        
             <!--PREÇO PRODUTO INPUT-->
             <div class="contatos__item_input_container">
               <input class="input input--adicionar" name="preco" id="preco" inputmode="numeric" value="0,00" placeholder="Preço do produto" required data-preco>
               <label class="input-label" for="preco">Preço do produto</label>
+            </div>
+
+            <!--ALT DA IMAGEM INPUT ♫-->
+            <div class="contatos__item_input_container">
+              <input class="input input--adicionar" pattern="^[a-zA-Z\u00C0-\u00FF -,?.!]*$" name="alt" id="alt" type="text" placeholder="Descrição da imagem" required maxlength="150" data-alt>
+              <label class="input-label" for="alt">Breve descrição da imagem</label>
             </div>
 
             <!--DESCRIÇÃO PRODUTO TEXTAREA ♫-->

@@ -34,10 +34,24 @@
   outline-color: var(--btn-blue);
   outline-style: solid;
 }
-.cabecalho__container_items:last-child{
+.cabecalho__container_items:last-child,
+.cabecalho__container_items:nth-child(3),
+.cabecalho__container_items_logado
+{
   margin-left: auto;
 }
-.cabecalho__container_items:last-child a{
+.cabecalho__container_items:nth-child(3) a{
+  background-color: var(--btn-blue);
+  text-decoration: none;
+  padding: 16px 70px;
+  border: 1px solid var(--btn-blue);
+  color: white;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.cabecalho__container_items:last-child a,
+.cabecalho__container_items_logado a{
   text-decoration: none;
   padding: 16px 70px;
   border: 1px solid var(--btn-blue);
@@ -45,7 +59,13 @@
   font-weight: 400;
   transition: all 0.3s;
 }
-.cabecalho__container_items:last-child a:hover{
+.cabecalho__container_items:nth-child(3) a:hover{
+  border-color: var(--btn-blue);
+  color: white;
+  background-color: rgb(90, 142, 255);
+}
+.cabecalho__container_items:last-child a:hover,
+.cabecalho__container_items_logado a:hover{
   border-color: white;
   color: white;
   background-color: var(--btn-blue);
@@ -78,15 +98,20 @@
   .cabecalho__container_items .cabecalho__search_bar{
     width: 272px;
   }
-  .cabecalho__container_items:last-child a{
+  .cabecalho__container_items:last-child a,
+  .cabecalho__container_items_logado a,
+  .cabecalho__container_items:nth-child(3) a{
     padding: 12px 64px;
     
   }
   
 }
 @media only screen and (max-width: 992px){
-  .cabecalho__container_items:last-child a{
-    padding: 12px 20px;   
+  .cabecalho__container_items:last-child a,
+  .cabecalho__container_items_logado a,
+  .cabecalho__container_items:nth-child(3) a{
+    
+    padding: 12px 20px;
   }
 }
 
@@ -99,7 +124,9 @@
   .cabecalho__logo{
     width: 100px;
   }
-  .cabecalho__container_items:last-child{
+  .cabecalho__container_items:last-child,
+  .cabecalho__container_items_logado,
+  .cabecalho__container_items:nth-child(3){
     margin-left: 0;
   }
   
@@ -147,6 +174,22 @@
     }
   }
 }
-@media only screen and (max-width: 360px){
+@media only screen and (max-width: 400px){
+  .cabecalho__container_items:last-child a,
+  .cabecalho__container_items_logado a,
+  .cabecalho__container_items:nth-child(3) a{
+    padding: 10px 3px;
+    
+  }
+  .cabecalho__container_items:last-child,
+  .cabecalho__container_items_logado a,
+  .cabecalho__container_items:nth-child(3) a{
+    font-size: 12px;
+  }
+}
 
+@media only screen and (max-width: 310px){
+  .cabecalho__container{
+    flex-wrap: wrap;
+  }
 }

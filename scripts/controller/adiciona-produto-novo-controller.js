@@ -27,6 +27,7 @@ formulario.addEventListener('submit', (evento)=>{
   const titulo = evento.target.querySelector('[data-titulo]').value
   const preco = SimpleMaskMoney.formatToNumber(precoMascara.value);
   const descricao = evento.target.querySelector('[data-textarea-descricao]').value
+  
   produtosService.adicionaProduto(uploaded_image, alt, tipo, titulo, preco, descricao)
   .then(() => {
     
