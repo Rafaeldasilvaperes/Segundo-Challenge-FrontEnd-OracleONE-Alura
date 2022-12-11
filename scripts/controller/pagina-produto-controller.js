@@ -9,6 +9,7 @@ export function criaPaginaProduto(){
 
   produtosService.detalhaProduto(id)
   .then(produto => {
+    produto.productImage = atob(produto.productImage) // FOR C#
     document.title = produto.productName
     const dataTipos = document.querySelector(`[data-produtos]`)
     dataTipos.dataset.produtos = `${produto.productType}`
@@ -22,11 +23,13 @@ export function criaPaginaProduto(){
               <div class="produto__descricao">
                 <h2 class="produto__descricao__titulo">${produto.productName}</h2>
                 <h3 class="produto__descricao__subtitulo">R$ ${produto.productPrice}</h3>
-                <h4 class="produto__descricao__texto">${produto.productDesc}</h4>
+                <h4 class="produto__descricao__texto">${produto.productDescription}</h4>
               </div>
           </div> 
   
     `
+    
+    //<h4 class="produto__descricao__texto">${produto.productDesc}</h4> // NODEJS
     return item.innerHTML = produtoTemplate
   })
 }
@@ -35,8 +38,10 @@ function produtosRelacionados(elementoType, ul){
   produtosService.listaProdutos()
   .then(data => {
       data.forEach(elemento => {
+        elemento.productImage = atob(elemento.productImage) // FOR C#
         if(elemento.productType == elementoType){
-          return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento._id, ".."))
+          
+          return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento.id, ".."))
         }
     });
   })

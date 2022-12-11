@@ -15,6 +15,7 @@ export function criadorProdutosTiposPrincipais(objeto, _id, stringDotsPath){
           </article>
 
   `
+  
   item.innerHTML = produtoTemplate;
 
   return item

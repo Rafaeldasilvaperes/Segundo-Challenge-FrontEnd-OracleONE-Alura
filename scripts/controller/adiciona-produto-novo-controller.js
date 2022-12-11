@@ -28,7 +28,8 @@ formulario.addEventListener('submit', (evento)=>{
   const preco = SimpleMaskMoney.formatToNumber(precoMascara.value);
   const descricao = evento.target.querySelector('[data-textarea-descricao]').value
   
-  produtosService.adicionaProduto(uploaded_image, alt, tipo, titulo, preco, descricao)
+  const uploaded_image2 = btoa(uploaded_image)
+  produtosService.adicionaProduto(uploaded_image2, alt, tipo, titulo, preco, descricao)
   .then(() => {
     
     window.location.href = '../views/produtos-home.html';
