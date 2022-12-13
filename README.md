@@ -21,6 +21,8 @@ Nesse projeto tivemos a divisão em 2 Sprints:
 Você pode testar a aplicação acessando este link: 
 - <a href="https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/" target="_blank"><strong>Alura Music ♫</strong></a> (GitHub Pages)
 
+- <a href="https://segundo-challenge-front-end-oracle-one-alura.vercel.app/index.html">Alura Music ♫</a> (Vercel)
+
 A aplicação é responsiva para <strong>mobile</strong>, <strong>tablet</strong> e <strong>desktop</strong>
 
 

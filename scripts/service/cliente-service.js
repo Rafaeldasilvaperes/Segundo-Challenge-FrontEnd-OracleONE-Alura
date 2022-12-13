@@ -108,7 +108,12 @@ const ENDPOINT = ENDPOINTS.Cyclic;
 // GET ALL CSHARP
 async function listaProdutos(){
   try {
-    const resposta = await fetch(`${CSHARP}`)
+    const resposta = await fetch(`${CSHARP}`, {
+      method: 'GET',
+      headers: {
+        'Content-Security-Policy': 'upgrade-insecure-requests'
+      }
+    })
     return await resposta.json()
   } catch (error) {
     console.log(error)
