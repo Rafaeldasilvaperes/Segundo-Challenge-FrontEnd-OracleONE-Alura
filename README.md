@@ -21,14 +21,12 @@ Nesse projeto tivemos a divisão em 2 Sprints:
 Você pode testar a aplicação acessando este link: 
 - <a href="https://rafaeldasilvaperes.github.io/Segundo-Challenge-FrontEnd-OracleONE-Alura/" target="_blank"><strong>Alura Music ♫</strong></a> (GitHub Pages)
 
-- <a href="https://segundo-challenge-front-end-oracle-one-alura.vercel.app/index.html">Alura Music ♫</a> (Vercel)
-
 A aplicação é responsiva para <strong>mobile</strong>, <strong>tablet</strong> e <strong>desktop</strong>
 
 
 ### Persistência de dados
 
-A persistência de dados na aplicação está sendo feita por uma API em .NET 6 usando C# desenvolvida por mim. Os dados estão sendo salvos em um banco de dados NoSQL o MongoDB na núvem com o uso do [MongoDB Atlas](https://www.mongodb.com/pt-br/cloud/atlas/efficiency). Você pode visitar o repositório da API que consumo por esse front-end através deste link:
+A persistência de dados na aplicação está sendo feita por uma API desenvolvida em NodeJS por mim. Os dados estão sendo salvos em um banco de dados NoSQL o MongoDB na núvem com o uso do [MongoDB Atlas](https://www.mongodb.com/pt-br/cloud/atlas/efficiency). Você pode visitar o repositório da API que consumo por esse front-end através deste link:
 
 - <a href="https://github.com/Rafaeldasilvaperes/Alura-Music-API-in-nodejsExpress" target="_blank"><strong>Alura Music API in NodeJsExpress</strong></a> (repositório)
 

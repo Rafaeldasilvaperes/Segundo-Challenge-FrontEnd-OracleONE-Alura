@@ -56,7 +56,7 @@
 }
 .produtos__article:hover .produtos__item_preco{
   color: green;
-  
+  font-size: large;
 }
 .produtos__item, .produtos__item_link_ver_mais{
   text-decoration: none;

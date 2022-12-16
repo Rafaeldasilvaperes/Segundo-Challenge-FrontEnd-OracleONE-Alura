@@ -10,8 +10,7 @@ export function filtraProdutoPorCategoria(type, elemento){
   
   dataTipos.forEach(ul =>  {
     if(ul.getAttribute("data-produtos") == type ){
-      // return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento._id, ".")) // NODEJS
-      return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento.id, ".")) // C#
+      return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento._id, "."))
     }
   }
   )
@@ -25,7 +24,6 @@ export function appendProdutosPorTipo(){
   .then(data => {
     console.log(data)
       data.forEach(elemento => {
-        elemento.productImage = atob(elemento.productImage) // FOR C# 
         filtraProdutoPorCategoria(elemento.productType, elemento)
     });
   })
