@@ -21,7 +21,7 @@ export function criadorDeProduto(objeto){
             </div>
             <h2 class="produtos__item_titulo">${objeto.productName}</h2>
             <h3 class="produtos__item_preco">R$ ${objeto.productPrice}</h3>
-            <a href="#" class="produtos__item_link_ver_mais">#${objeto._id}</a>
+            <a href="./produtos-produto.html?id=${objeto._id}" class="produtos__item_link_ver_mais">#${objeto._id}</a>
         </article>
 
   `
@@ -46,7 +46,6 @@ export function appendTodosProdutos(){
         
         if(buttonID){
          
-          console.log(buttonID, "DENTRO IF")
           modalContainer.classList.add('active')
           const buttonSIM = modal.querySelector('[data-btn-sim]')
           const buttonNAO = modal.querySelector('[data-btn-nao]')
@@ -55,15 +54,13 @@ export function appendTodosProdutos(){
   
             let escolha = e.target
             if(escolha && escolha == buttonSIM){
-              console.log("APAGOU!", buttonID)
               modalContainer.classList.remove('active')
               deletarProduto(buttonID, evento)
               
             }else if(escolha && escolha == buttonNAO){
-              console.log("NOPE")
               modalContainer.classList.remove('active')
             }else if(escolha && escolha == modal || escolha == modal.children){
-              console.log("Erro os botões meu filho")
+              
             }
           }) 
         }

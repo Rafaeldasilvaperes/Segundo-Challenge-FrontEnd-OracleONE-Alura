@@ -40,12 +40,12 @@ async function adicionaProduto(img_b64, alt, tipo, titulo, preco, descricao){
         'Authorization': `Bearer ${token}` 
       },
       body: JSON.stringify({
-        productName: titulo,
-        productPrice: preco,
-        productDesc: descricao,
+        productImage: img_b64,
         productAlt: alt,
         productType: tipo,
-        productImage: img_b64
+        productName: titulo,
+        productPrice: preco,
+        productDesc: descricao
       })
     })
     console.log(resposta.body)
@@ -54,7 +54,6 @@ async function adicionaProduto(img_b64, alt, tipo, titulo, preco, descricao){
     console.log(error)
     return error
   }
-  
 }
 
 // PATCH:id
