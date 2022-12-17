@@ -22,7 +22,7 @@ produtosService.detalhaProduto(id)
   .then(produto => {
     // automatically filling inputs with products informations to be edited
     document.title = `Editar | ${produto.productName}`
-    img.style.backgroundImage = `url(${atob(produto.productImage)})` 
+    img.style.backgroundImage = `url(${produto.productImage})`
     uploaded_image = `${produto.productImage}`
     alt.value = produto.productAlt
     tipo.value = produto.productType
