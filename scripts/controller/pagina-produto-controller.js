@@ -9,6 +9,7 @@ export function criaPaginaProduto(){
 
   produtosService.detalhaProduto(id)
   .then(produto => {
+    produto.productImage = atob(produto.productImage)
     document.title = produto.productName
     const dataTipos = document.querySelector(`[data-produtos]`)
     dataTipos.dataset.produtos = `${produto.productType}`
@@ -35,6 +36,7 @@ function produtosRelacionados(elementoType, ul){
   produtosService.listaProdutos()
   .then(data => {
       data.forEach(elemento => {
+        elemento.productImage = atob(elemento.productImage)
         if(elemento.productType == elementoType){
           return ul.appendChild(criadorProdutosTiposPrincipais(elemento, elemento._id, ".."))
         }

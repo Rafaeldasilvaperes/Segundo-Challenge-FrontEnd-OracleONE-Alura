@@ -69,6 +69,7 @@ export function appendTodosProdutos(){
   produtosService.listaProdutos()
     .then(data => {
         data.forEach(elemento => {
+        elemento.productImage = atob(elemento.productImage)
         tabela.appendChild(criadorDeProduto(elemento))
       });
     })

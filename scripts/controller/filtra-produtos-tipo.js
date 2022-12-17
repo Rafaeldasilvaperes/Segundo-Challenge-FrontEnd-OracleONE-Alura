@@ -24,6 +24,7 @@ export function appendProdutosPorTipo(){
   .then(data => {
     console.log(data)
       data.forEach(elemento => {
+        elemento.productImage = atob(elemento.productImage)
         filtraProdutoPorCategoria(elemento.productType, elemento)
     });
   })
