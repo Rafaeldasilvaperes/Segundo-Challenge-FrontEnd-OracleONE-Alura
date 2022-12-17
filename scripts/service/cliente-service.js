@@ -36,6 +36,7 @@ async function adicionaProduto(img_b64, alt, tipo, titulo, preco, descricao){
     const resposta = await fetch(`${ENDPOINT}${APIKEY}`, {
       method: 'POST',
       headers: { 
+        'Access-Control-Allow-Origin': '*',
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${token}` 
       },
