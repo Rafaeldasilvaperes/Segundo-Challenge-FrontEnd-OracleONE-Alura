@@ -31,7 +31,7 @@ async function detalhaProduto(id){
 
 // POST
 async function adicionaProduto(img_b64, alt, tipo, titulo, preco, descricao){
-  try {
+ 
     const token = sessionStorage.getItem('JWT');
     const resposta = await fetch(`${ENDPOINT}${APIKEY}`, {
       method: 'POST',
@@ -50,10 +50,7 @@ async function adicionaProduto(img_b64, alt, tipo, titulo, preco, descricao){
     })
     console.log(resposta.body)
     return resposta.body
-  } catch (error) {
-    console.log(error)
-    return error
-  }
+  
 }
 
 // PATCH:id
